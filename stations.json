@@ -1,0 +1,89 @@
+[{
+  "station": "88.1",
+  "source": "http://18783.live.streamtheworld.com/MYFLRAAC_SC",
+  "type": "audio/aac"
+}, {
+  "station": "88.9",
+  "source": "http://emf.streamguys1.com/sk012_mp3_high_web",
+  "type": "audio/mpeg"
+}, {
+  "station": "89.9",
+  "source": "http://ice41.securenetsystems.net:80/KJILW",
+  "type": "audio/aac"
+}, {
+  "station": "90.3",
+  "source": "http://mediaserver3.afa.net:8000/inspo.mp3",
+  "type": "audio/mpeg"
+}, {
+  "station": "91.5",
+  "source": "https://streaming.kansaspublicradio.org:8001/kpr1",
+  "type": "audio/mpeg"
+}, {
+  "station": "92.5",
+  "source": "http://50.22.253.45:80/bottradio",
+  "type": "audio/aac"
+}, {
+  "station": "93.7",
+  "source": "http://crystalout.surfernetwork.com:8001/KMAN_MP3",
+  "type": "audio/mpeg"
+}, {
+  "station": "94.5",
+  "source": "http://1.ice1.firststreaming.com:8000/wibw_fm.aac",
+  "type": "audio/aac"
+}, {
+  "station": "95.3",
+  "source": "https://slave.irdb.network/khca.opus",
+  "type": "audio/ogg"
+}, {
+  "station": "96.3",
+  "source": "http://crystalout.surfernetwork.com:8001/KACZ_MP3",
+  "type": "audio/mpeg"
+}, {
+  "station": "97.5",
+  "source": "http://ice9.securenetsystems.net/KJCKFM",
+  "type": "audio/aac"
+}, {
+  "station": "98.3",
+  "source": "http://ksmk.org:8000/radio",
+  "type": "audio/mpeg"
+}, {
+  "station": "99.3",
+  "source": "http://14643.live.streamtheworld.com/KWICFMAAC_SC",
+  "type": "audio/aac"
+}, {
+  "station": "100.3",
+  "source": "http://16693.live.streamtheworld.com/KDVVFMAAC_SC",
+  "type": "audio/aac"
+}, {
+  "station": "101.5",
+  "source": "http://crystalout.surfernetwork.com:8001/KMKF_MP3",
+  "type": "audio/mpeg"
+}, {
+  "station": "102.5",
+  "source": "http://crystalout.surfernetwork.com:8001/KBLS-FM_MP3",
+  "type": "audio/mpeg"
+}, {
+  "station": "102.9",
+  "source": "http://19473.live.streamtheworld.com/KTOPFMAAC_SC",
+  "type": "audio/aac"
+}, {
+  "station": "103.5",
+  "source": "http://ice9.securenetsystems.net/KQLAFM2",
+  "type": "audio/mpeg"
+}, {
+  "station": "104.7",
+  "source": "http://crystalout.surfernetwork.com:8001/KXBZ_MP3",
+  "type": "audio/mpeg"
+}, {
+  "station": "105.9",
+  "source": "http://icy3.abacast.com/greatplainsmedia-kkswfmaac-48",
+  "type": "audio/aac"
+}, {
+  "station": "106.9",
+  "source": "http://1.ice1.firststreaming.com:8000/ktpk_fm.aac",
+  "type": "audio/aac"
+}, {
+  "station": "107.7",
+  "source": "http://18613.live.streamtheworld.com/KMAJFMAAC_SC",
+  "type": "audio/aac"
+}]
