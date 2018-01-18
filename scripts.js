@@ -26,6 +26,14 @@ if (storage.getItem('current') === undefined) {
 var xhttp = new XMLHttpRequest();
 xhttp.addEventListener( 'load', function () {
   stations = JSON.parse(this.responseText);
+  
+  var buttons = document.querySelectorAll('.preset button');
+  for (i = 0; i < buttons.length; i++) {
+    if (storage.getItem(buttons[i].id) !== undefined) {
+      buttons[i].innerHTML = stations[storage.getItem(buttons[i].id)].station;
+    }
+    buttons[i].addEventListener('click', presetSelect);
+  }
 });
 xhttp.open('GET', 'stations.json', true);
 xhttp.overrideMimeType('application/json');
@@ -129,12 +137,4 @@ window.addEventListener('load', function() {
       presetActive(false);
     }
   });
-  
-  var buttons = document.querySelectorAll('.preset button');
-  for (i = 0; i < buttons.length; i++) {
-    if (storage.getItem(buttons[i].id) !== undefined) {
-      buttons[i].innerHTML = stations[storage.getItem(buttons[i].id)].station;
-    }
-    buttons[i].addEventListener('click', presetSelect);
-  }
 });
