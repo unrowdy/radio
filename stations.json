@@ -1,14 +1,14 @@
 [{
   "station": "88.1",
-  "source": "http://18783.live.streamtheworld.com/MYFLRAAC_SC",
+  "source": "https://playerservices.streamtheworld.com/api/livestream-redirect/MYFLRAAC_SC",
   "type": "audio/aac"
 }, {
   "station": "88.9",
-  "source": "http://emf.streamguys1.com/sk012_mp3_high_web",
+  "source": "https://emf.streamguys1.com/sk012_mp3_high_web",
   "type": "audio/mpeg"
 }, {
   "station": "89.9",
-  "source": "http://ice41.securenetsystems.net:80/KJILW",
+  "source": "https://ice41.securenetsystems.net/KJILW",
   "type": "audio/aac"
 }, {
   "station": "90.3",
@@ -24,11 +24,11 @@
   "type": "audio/aac"
 }, {
   "station": "93.7",
-  "source": "http://crystalout.surfernetwork.com:8001/KMAN_MP3",
+  "source": "https://crystalout.surfernetwork.com:8001/KMAN_MP3",
   "type": "audio/mpeg"
 }, {
   "station": "94.5",
-  "source": "https://prod-54-188-153-142.wostreaming.net/alphacorporate-wibwfmaac-ibc4",
+  "source": "https://live.wostreaming.net/direct/alphacorporate-wibwfmaac-ibc4",
   "type": "audio/aac"
 }, {
   "station": "95.3",
@@ -36,11 +36,11 @@
   "type": "audio/ogg"
 }, {
   "station": "96.3",
-  "source": "http://crystalout.surfernetwork.com:8001/KACZ_MP3",
+  "source": "https://crystalout.surfernetwork.com:8001/KACZ_MP3",
   "type": "audio/mpeg"
 }, {
   "station": "97.5",
-  "source": "http://ice9.securenetsystems.net/KJCKFM",
+  "source": "https://ice9.securenetsystems.net/KJCKFM",
   "type": "audio/aac"
 }, {
   "station": "98.3",
@@ -48,42 +48,42 @@
   "type": "audio/mpeg"
 }, {
   "station": "99.3",
-  "source": "http://14643.live.streamtheworld.com/KWICFMAAC_SC",
+  "source": "https://playerservices.streamtheworld.com/api/livestream-redirect/KWICFMAAC_SC",
   "type": "audio/aac"
 }, {
   "station": "100.3",
-  "source": "http://16693.live.streamtheworld.com/KDVVFMAAC_SC",
+  "source": "https://playerservices.streamtheworld.com/api/livestream-redirect/KDVVFMAAC_SC",
   "type": "audio/aac"
 }, {
   "station": "101.5",
-  "source": "http://crystalout.surfernetwork.com:8001/KMKF_MP3",
+  "source": "https://crystalout.surfernetwork.com:8001/KMKF_MP3",
   "type": "audio/mpeg"
 }, {
   "station": "102.5",
-  "source": "http://crystalout.surfernetwork.com:8001/KBLS-FM_MP3",
+  "source": "https://crystalout.surfernetwork.com:8001/KBLS-FM_MP3",
   "type": "audio/mpeg"
 }, {
   "station": "102.9",
-  "source": "http://19473.live.streamtheworld.com/KTOPFMAAC_SC",
+  "source": "https://playerservices.streamtheworld.com/api/livestream-redirect/KTOPFMAAC_SC",
   "type": "audio/aac"
 }, {
   "station": "103.5",
-  "source": "http://ice9.securenetsystems.net/KQLAFM2",
-  "type": "audio/mpeg"
+  "source": "https://ice9.securenetsystems.net/KQLAFM",
+  "type": "audio/aac"
 }, {
   "station": "104.7",
-  "source": "http://crystalout.surfernetwork.com:8001/KXBZ_MP3",
+  "source": "https://crystalout.surfernetwork.com:8001/KXBZ_MP3",
   "type": "audio/mpeg"
 }, {
   "station": "105.9",
-  "source": "http://icy3.abacast.com/greatplainsmedia-kkswfmaac-48",
+  "source": "https://live.wostreaming.net/direct/greatplainsmedia-kkswfmaac-48",
   "type": "audio/aac"
 }, {
   "station": "106.9",
-  "source": "https://prod-65-19-131-183.wostreaming.net/alphacorporate-ktpkfmaac-ibc4",
+  "source": "https://live.wostreaming.net/direct/alphacorporate-ktpkfmaac-ibc4",
   "type": "audio/aac"
 }, {
   "station": "107.7",
-  "source": "http://18613.live.streamtheworld.com/KMAJFMAAC_SC",
+  "source": "https://playerservices.streamtheworld.com/api/livestream-redirect/KMAJFMAAC_SC",
   "type": "audio/aac"
 }]
