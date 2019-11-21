@@ -12,20 +12,18 @@ var player1 = {
   load: function(station) {
     visualizer.create();
     
-    if(!this.media) {
-      this.audio.captureStream = this.audio.captureStream || this.audio.mozCaptureStream;
-      var stream = this.audio.captureStream();
-      this.media = context.createMediaStreamSource(stream);
-      this.media.connect(analyser);
-    }
-
     this.source.setAttribute("src", station.source + randy());
     this.source.setAttribute("type", station.type);
     this.audio.appendChild(this.source);
     this.audio.load();
-    this.audio.oncanplay = function() {
-      player1.audio.play();
+    this.audio.oncanplay = () => {
+      this.audio.play();
       document.getElementById('tune').style.color = '#121214';
+      
+      this.audio.captureStream = this.audio.captureStream || this.audio.mozCaptureStream;
+      var stream = this.audio.captureStream();
+      this.media = context.createMediaStreamSource(stream);
+      this.media.connect(analyser);
     };
   },
   unload: function() {
