@@ -13,14 +13,21 @@
     <link rel="icon" sizes="192x192" href="icon-192.png" />
     <link rel="icon" sizes="16x16" href="favicon.ico" />
     <link rel="stylesheet" href="styles.css" />
+    <script src="player.js"></script>
     <script src="scripts.js"></script>
+    <script src="visualizer.js"></script>
+    <script src="display.js"></script>
+    <script async defer type="text/javascript" src="https://plausible.io/js/plausible.js"></script>
   </head>
   <body>
     <main>
       <div class="screen">
-        <span id="tune">Tuning</span>
-        <span id="display"></span>
-        <span id="error">Error</span>
+        <div class="text">
+          <span id="tune">Tuning</span><br />
+          <span id="error">Error</span>
+        </div>
+        <div id="lcd"></div>
+        <canvas id="frequency" height="72px" width="220px"></canvas>
       </div>
       <div class="preset">
         <button id="preset1">--</button>

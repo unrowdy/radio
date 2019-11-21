@@ -1,4 +1,4 @@
-var storage, stations, audio, source, preset;
+var storage, stations, preset;
 
 storage = {
   getItem: function(x) {
@@ -41,22 +41,26 @@ xhttp.send();
 
 preset = false;
 
-function tuneStation(x) {
-  source.setAttribute("src", stations[x].source);
-  source.setAttribute("type", stations[x].type);
-  audio.appendChild(source);
-  audio.load();
-  document.getElementById('error').style.opacity = '0';
-  document.getElementById('tune').style.opacity = '1';
-  document.getElementById("display").innerHTML = stations[x].station;
+function randy() {
+  return '?randy=' + Math.round(Math.random() * 100000000);
+}
+
+function tuneStation(x, retry) {
+  document.getElementById('error').style.color = '#121214';
+  document.getElementById('tune').style.color = '#54d454';
   document.getElementById("off").innerHTML = 'Off';
+  display.load(stations[x].station);
   document.title = stations[x].station;
   presetActive(false);
   storage.setItem('current', x);
-  audio.oncanplay = function() {
-    audio.play();
-    document.getElementById('tune').style.opacity = '0';
-  };
+
+  if(retry) {
+    player1.unload();
+    player2.load(stations[x]);
+  } else {
+    player2.unload();
+    player1.load(stations[x]);
+  }
 }
 
 function presetActive(active) {
@@ -82,30 +86,20 @@ function presetSelect(e) {
 }
 
 window.addEventListener('load', function() {
-  audio = document.createElement("audio");
-  audio.setAttribute("preload", "none");
-  document.body.appendChild(audio);
-  audio.addEventListener("error", function(e) {
-    document.getElementById('error').style.opacity = '1';
-    document.getElementById('tune').style.opacity = '0';
-  });
-
-  source = document.createElement("source");
-  source.addEventListener("error", function(e) {
-    document.getElementById('error').style.opacity = '1';
-    document.getElementById('tune').style.opacity = '0';
-  });
+  player1.create();
+  player2.create();
+  display.create();
+  visualizer.preload();
 
   document.getElementById('off').addEventListener('click', function() {
-    if(source.getAttribute("src")) {
-      source.removeAttribute("src");
-      source.removeAttribute("type");
-      audio.removeChild(source);
-      audio.load();
-      document.getElementById('error').style.opacity = '0';
-      document.getElementById('tune').style.opacity = '0';
-      document.getElementById("display").innerHTML = '';
+    if(player1.source.getAttribute("src") || player2.source.getAttribute("src")) {
+      player1.unload();
+      player2.unload();
+
+      document.getElementById('error').style.color = '#121214';
+      document.getElementById('tune').style.color = '#121214';
       document.getElementById("off").innerHTML = 'On';
+      display.unload();
       document.title = 'Radio';
       presetActive(false);
     } else {
@@ -131,7 +125,7 @@ window.addEventListener('load', function() {
   });
 
   document.getElementById('set').addEventListener('click', function() {
-    if(source.getAttribute("src") && !preset) {
+    if((player1.source.getAttribute("src") || player2.source.getAttribute("src")) && !preset) {
       presetActive(true);
     } else {
       presetActive(false);

@@ -2,19 +2,18 @@
 
 html, body {
   height: 100%;
-  /*min-height: 320px;*/
-  min-height: 192px;
-  min-width: 354px;
+  min-height: 258px;
+  min-width: 534px;
   margin: 0;
   background: #3d3d41;
 }
-body, .screen {
+body {
   display: flex;
   justify-content: space-around;
   align-items: center;
 }
 main {
-  flex-basis: 400px;
+  flex-basis: 680px;
 }
 main, button {
   font-family: 'Share Tech Mono', monospace;
@@ -22,32 +21,24 @@ main, button {
   letter-spacing: 0.05em;
   padding: 6px;
 }
-.screen {
-  height: 28px;
-  color: #54d454;
-  font-size: 36px;
-  padding: 21px;
-  background: #030303;
-  margin: 6px;
-}
 .preset, .control {
   display: flex;
   justify-content: space-between;
 }
 button {
-  height: 32px;
+  height: 42px;
   width: 20%;
   color: #e6e6f3;
-  font-size: 15px;
+  font-size: 16px;
   cursor: pointer;
   background: #1c1c1f;
   border: none;
-  margin: 6px;
+  margin: 8px;
 }
 .control button {
-  height: 42px;
+  height: 54px;
   flex-grow: 1;
-  font-size: 16px;
+  font-size: 18px;
 }
 button:hover {
   background: #2c2c30;
@@ -55,22 +46,14 @@ button:hover {
 button:focus {
   outline: none;
 }
-#display {
-  flex-basis: 35%;
-  text-align: center;
-}
 #error, #tune {
   flex-basis: 20%;
   align-self: flex-end;
-  font-size: 14px;
+  font-size: 16px;
   text-align: center;
-  opacity: 0;
-}
-#error {
-  color: #f33c3c;
 }
 #tune {
-  transition: opacity 800ms ease-in-out;
+  transition: color 800ms ease-in-out;
 }
 .blink {
   animation: 1s blink ease-in-out infinite;
@@ -96,4 +79,38 @@ a {
 }
 a:hover {
   color: #030303;
+}
+
+canvas {
+  display: block;
+  /*
+    auto hide on small window sizes
+    to be more similar to previous version
+    maybe adjust button heights also
+  */
+}
+svg {
+  float: right;
+  fill: #121214;
+}
+#lcd {
+  width: 138px;
+}
+.screen {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 21px;
+  color: #121214;
+  background: #030303;
+  margin: 8px;
+}
+.screen > * {
+  flex-shrink: 0;
+}
+.text {
+  line-height: 2;
+}
+.lit {
+  fill: #54d454;
 }
