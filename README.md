@@ -27,7 +27,6 @@ From Developer Tools console in browser.
   * index.html still has canvas
 
   * Display one large svg
-  * Javascript modules
   * npm for rollup and replace vagrant
   * clean up visualizer on/off code
 

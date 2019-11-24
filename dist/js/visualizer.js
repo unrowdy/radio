@@ -1,11 +1,11 @@
-var context, analyser;
+// visualizer.js
 
-// get those two ^ vars moved in
+import {settings} from './settings.js';
+import {element} from './display.js';
 
-var black = '#444444';
 var squares = 12;
 
-var visualizer = {
+export let visualizer = {
   running: false,
   preload: function() { // create the initial screen
     this.canvas = document.getElementById('frequency');
@@ -25,7 +25,7 @@ var visualizer = {
     this.canvas.parentNode.replaceChild(svg, this.canvas);
 
     values.forEach((val, key) => {
-      for(k=0; k<squares; k++) {
+      for(let k=0; k<squares; k++) {
         element.create('rect', {
           parent: svg,
           attributes: {
@@ -46,11 +46,11 @@ var visualizer = {
     if(!this.created) {
       this.created = true;
 
-      context = new AudioContext();
-      analyser = context.createAnalyser();
-      this.data = new Uint8Array(analyser.frequencyBinCount);
+      this.context = new AudioContext();
+      this.analyser = this.context.createAnalyser();
+      this.data = new Uint8Array(this.analyser.frequencyBinCount);
 
-      analyser.connect(context.destination);
+      this.analyser.connect(this.context.destination);
     }
     if(!this.running) {
       this.running = true;
@@ -59,11 +59,11 @@ var visualizer = {
   },
   load: function() { // refresh it
     if(this.running) { // cause you still get like 20 refreshes after killing it
-      var len = analyser.frequencyBinCount;
+      var len = this.analyser.frequencyBinCount;
       var values = new Array(10).fill(0);
       var counts = new Array(10).fill(0);
 
-      analyser.getByteFrequencyData(this.data);
+      this.analyser.getByteFrequencyData(this.data);
       var bob = this.data.slice(1);
 
       // Add all the analyser values into bucket totals
@@ -81,7 +81,7 @@ var visualizer = {
         // make it exponential and scale to 12
         var mag = Math.round((avg * avg) * (12 / (255 * 255)));
 
-        for(h=0; h<squares; h++) {
+        for(let h=0; h<squares; h++) {
           var id = key + '-' + (h + 1);
           if((h+1) <= mag) {
             document.getElementById(id).style.fill = settings.colors.gradient[h];
@@ -100,10 +100,10 @@ var visualizer = {
     // clear the screen
     var values = new Array(10).fill(0);
     values.forEach((val, key) => {
-      for(h=0; h<squares; h++) {
+      for(let h=0; h<squares; h++) {
         var id = key + '-' + (h + 1);
         document.getElementById(id).style.fill = settings.colors.off;
       }
     });
   }
-}
+};

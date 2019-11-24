@@ -1,34 +1,14 @@
-var settings = {
-  colors: {
-    on: '#54d454',
-    error: '#f33c3c',
-    off: '#121214',
-    gradient: [
-      '#54d454',
-      '#54d454',
-      '#54d454',
-      '#54d454',
-      '#54d454',
-      '#54d454',
-      '#54d454',
-      '#54d454',
-      '#54d454',
-      '#e0e042',
-      '#e0e042',
-      '#f33c3c',
-    ]
-  },
-  volume: function(n) {
-    player1.audio.volume = n;
-    player2.audio.volume = n;
-  },
-  color: function(hex) {
-    settings.colors.on = hex;
-    display.load(stations[storage.getItem('current')].station);
-  }
+// player.js
+
+import {settings} from './settings.js';
+import {preset} from './preset.js';
+import {visualizer} from './visualizer.js';
+
+function randy() {
+  return '?randy=' + Math.round(Math.random() * 100000000);
 }
 
-var lcd = {
+export let lcd = {
   tune: function(state) {
     if(state) {
       document.getElementById('tune').style.color = settings.colors.on;
@@ -45,7 +25,7 @@ var lcd = {
   }
 }
 
-var player1 = {
+export let player1 = {
   create: function() {
     this.audio = document.createElement("audio");
     this.audio.setAttribute("preload", "none");
@@ -53,7 +33,7 @@ var player1 = {
 
     this.source = document.createElement("source");
     this.source.addEventListener("error", function(e) {
-      tuneStation(storage.getItem('current'), true);
+      preset.play(storage.getItem('current'), true);
     });
   },
   load: function(station) {
@@ -70,8 +50,8 @@ var player1 = {
       
       this.audio.captureStream = this.audio.captureStream || this.audio.mozCaptureStream;
       var stream = this.audio.captureStream();
-      this.media = context.createMediaStreamSource(stream);
-      this.media.connect(analyser);
+      this.media = visualizer.context.createMediaStreamSource(stream);
+      this.media.connect(visualizer.analyser);
       
       visualizer.create();
     };
@@ -85,7 +65,7 @@ var player1 = {
   }
 }
 
-var player2 = {
+export let player2 = {
   create: function() {
     this.audio = document.createElement("audio");
     this.audio.setAttribute("preload", "none");

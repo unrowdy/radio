@@ -1,4 +1,8 @@
-var element = {
+// display.js
+
+import {settings} from './settings.js';
+
+export let element = {
   create: function(type, data) {
     var element = document.createElementNS("http://www.w3.org/2000/svg", type);
     
@@ -18,9 +22,9 @@ var element = {
 
     return element;
   }
-}
+};
 
-var display = {
+export let display = {
   chart: {
     0: ['a','b','c','d','e','f'],
     1: ['b','c'],
@@ -56,7 +60,7 @@ var display = {
       }
     });
   
-    for(p = 0; p < 4; p++) {
+    for(let p = 0; p < 4; p++) {
       var offset = 108 - (43 * p);
   
       var prnt = element.create('g', {
@@ -111,7 +115,7 @@ var display = {
     document.getElementById('dp').style.fill = settings.colors.on;
   },
   unload: function() {
-    for(p = 0; p < 4; p++) {
+    for(let p = 0; p < 4; p++) {
       var segm = this.chart[8]
       if(p === 3) {
         segm = this.chart[1];
@@ -123,4 +127,4 @@ var display = {
     }
     document.getElementById('dp').style.fill = settings.colors.off;
   }
-}
+};
