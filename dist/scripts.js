@@ -46,8 +46,8 @@ function randy() {
 }
 
 function tuneStation(x, retry) {
-  document.getElementById('error').style.color = '#121214';
-  document.getElementById('tune').style.color = '#54d454';
+  led.error(false);
+  led.tune(true);
   document.getElementById("off").innerHTML = 'Off';
   display.load(stations[x].station);
   document.title = stations[x].station;
@@ -96,8 +96,8 @@ window.addEventListener('load', function() {
       player1.unload();
       player2.unload();
 
-      document.getElementById('error').style.color = '#121214';
-      document.getElementById('tune').style.color = '#121214';
+      led.error(false);
+      led.tune(false);
       document.getElementById("off").innerHTML = 'On';
       display.unload();
       document.title = 'Radio';

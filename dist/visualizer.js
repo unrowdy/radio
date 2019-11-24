@@ -66,7 +66,7 @@ var visualizer = {
 
       this.ctx.fillStyle = '#121214';
       this.ctx.fillRect(key * 22, this.canvas.height, 16, -this.canvas.height);
-      this.ctx.fillStyle = '#54d454';
+      this.ctx.fillStyle = led.lit;
       this.ctx.fillRect(key * 22, this.canvas.height, 16, -mag);
     });
     

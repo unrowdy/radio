@@ -95,10 +95,10 @@ var display = {
       var mask = this.chart[c];
     
       mask.forEach((s) => {
-        document.getElementById(s + p).classList.add('lit');
+        document.getElementById(s + p).style.fill = led.lit;
       });
     });
-    document.getElementById('dp').classList.add('lit');
+    document.getElementById('dp').style.fill = led.lit;
   },
   unload: function() {
     for(p = 0; p < 4; p++) {
@@ -108,9 +108,9 @@ var display = {
       }
 
       segm.forEach((s) => {
-        document.getElementById(s + p).classList.remove('lit');
+        document.getElementById(s + p).style.fill = led.off;
       });
     }
-    document.getElementById('dp').classList.remove('lit');
+    document.getElementById('dp').style.fill = led.off;
   }
 }
