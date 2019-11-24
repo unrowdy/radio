@@ -35,7 +35,7 @@ xhttp.addEventListener( 'load', function () {
     buttons[i].addEventListener('click', presetSelect);
   }
 });
-xhttp.open('GET', 'stations.json', true);
+xhttp.open('GET', 'data/stations.json', true);
 xhttp.overrideMimeType('application/json');
 xhttp.send();
 

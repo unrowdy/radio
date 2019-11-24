@@ -1,6 +1,6 @@
 # Online Radio
 
-![screenshot](dist/screencast.gif)
+![screenshot](dist/img/screencast.gif)
 
 https://chrispalmeri.com/radio/
 
