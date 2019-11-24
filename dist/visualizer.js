@@ -2,33 +2,47 @@ var context, analyser;
 
 // get those two ^ vars moved in
 
+var black = '#444444';
+var squares = 12;
+
 var visualizer = {
-  preload: function() {
+  running: false,
+  preload: function() { // create the initial screen
     this.canvas = document.getElementById('frequency');
-    this.ctx = this.canvas.getContext('2d');
 
     var values = new Array(10).fill(0);
 
-    values.forEach((val, key) => {
-      this.ctx.fillStyle = '#121214';
-      this.ctx.fillRect(key * 22, this.canvas.height, 16, -this.canvas.height);
+    var screen = document.querySelector('.screen');
+  
+    var svg = element.create('svg', {
+      parent: screen,
+      attributes: {
+        height: '72px',
+        width: '220px'
+      }
     });
 
-    this.ctx.fillStyle = '#030303';
-    this.ctx.fillRect(0, this.canvas.height -6, this.canvas.width, 2);
-    this.ctx.fillRect(0, this.canvas.height -12, this.canvas.width, 2);
-    this.ctx.fillRect(0, this.canvas.height -18, this.canvas.width, 2);
-    this.ctx.fillRect(0, this.canvas.height -24, this.canvas.width, 2);
-    this.ctx.fillRect(0, this.canvas.height -30, this.canvas.width, 2);
-    this.ctx.fillRect(0, this.canvas.height -36, this.canvas.width, 2);
-    this.ctx.fillRect(0, this.canvas.height -42, this.canvas.width, 2);
-    this.ctx.fillRect(0, this.canvas.height -48, this.canvas.width, 2);
-    this.ctx.fillRect(0, this.canvas.height -54, this.canvas.width, 2);
-    this.ctx.fillRect(0, this.canvas.height -60, this.canvas.width, 2);
-    this.ctx.fillRect(0, this.canvas.height -66, this.canvas.width, 2);
-    this.ctx.fillRect(0, this.canvas.height -72, this.canvas.width, 2);
+    this.canvas.parentNode.replaceChild(svg, this.canvas);
+
+    values.forEach((val, key) => {
+      for(k=0; k<squares; k++) {
+        element.create('rect', {
+          parent: svg,
+          attributes: {
+            x: key * 22,
+            y: (72 - 4) - (k * 6),
+            width: 16,
+            height: 4,
+            id: key + '-' + (k+1)
+          },
+          style: {
+            fill: settings.colors.off
+          }
+        });
+      }
+    });
   },
-  create: function() {
+  create: function() { // connect it to the analyser
     if(!this.created) {
       this.created = true;
 
@@ -37,53 +51,59 @@ var visualizer = {
       this.data = new Uint8Array(analyser.frequencyBinCount);
 
       analyser.connect(context.destination);
-
+    }
+    if(!this.running) {
+      this.running = true;
       this.load();
     }
   },
-  load: function() {
-    var len = analyser.frequencyBinCount;
+  load: function() { // refresh it
+    if(this.running) { // cause you still get like 20 refreshes after killing it
+      var len = analyser.frequencyBinCount;
+      var values = new Array(10).fill(0);
+      var counts = new Array(10).fill(0);
+
+      analyser.getByteFrequencyData(this.data);
+      var bob = this.data.slice(1);
+
+      // Add all the analyser values into bucket totals
+      // and keep a count to get the average
+      bob.forEach((valu, i) => {
+        var step = 9 - Math.floor(Math.log2(len / (i+2)));
+
+        values[step] += valu;
+        counts[step] += 1;
+      });
+
+      values.forEach((val, key) => {
+        // this is the average value for that bar
+        var avg = Math.round(val / counts[key]);
+        // make it exponential and scale to 12
+        var mag = Math.round((avg * avg) * (12 / (255 * 255)));
+
+        for(h=0; h<squares; h++) {
+          var id = key + '-' + (h + 1);
+          if((h+1) <= mag) {
+            document.getElementById(id).style.fill = settings.colors.gradient[h];
+          } else {
+            document.getElementById(id).style.fill = settings.colors.off;
+          }
+        }
+      });
+    
+      window.requestAnimationFrame(this.load.bind(this));
+    }
+  },
+  stop: function() {
+    this.running = false;
+
+    // clear the screen
     var values = new Array(10).fill(0);
-    var counts = new Array(10).fill(0);
-
-    analyser.getByteFrequencyData(this.data);
-    var bob = this.data.slice(1);
-
-    bob.forEach((valu, i) => {
-      var step = 9 - Math.floor(Math.log2(len / (i+2)));
-
-      values[step] += valu;
-      counts[step] += 1;
-    });
-    
-    this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
-
     values.forEach((val, key) => {
-      var avg = Math.round(val / counts[key]);
-      var mag = Math.round((avg * avg) * (this.canvas.height / (255 * 255)));
-
-      mag = Math.round(mag / 6) * 6;
-
-      this.ctx.fillStyle = '#121214';
-      this.ctx.fillRect(key * 22, this.canvas.height, 16, -this.canvas.height);
-      this.ctx.fillStyle = led.lit;
-      this.ctx.fillRect(key * 22, this.canvas.height, 16, -mag);
+      for(h=0; h<squares; h++) {
+        var id = key + '-' + (h + 1);
+        document.getElementById(id).style.fill = settings.colors.off;
+      }
     });
-    
-    this.ctx.fillStyle = '#030303';
-    this.ctx.fillRect(0, this.canvas.height -6, this.canvas.width, 2);
-    this.ctx.fillRect(0, this.canvas.height -12, this.canvas.width, 2);
-    this.ctx.fillRect(0, this.canvas.height -18, this.canvas.width, 2);
-    this.ctx.fillRect(0, this.canvas.height -24, this.canvas.width, 2);
-    this.ctx.fillRect(0, this.canvas.height -30, this.canvas.width, 2);
-    this.ctx.fillRect(0, this.canvas.height -36, this.canvas.width, 2);
-    this.ctx.fillRect(0, this.canvas.height -42, this.canvas.width, 2);
-    this.ctx.fillRect(0, this.canvas.height -48, this.canvas.width, 2);
-    this.ctx.fillRect(0, this.canvas.height -54, this.canvas.width, 2);
-    this.ctx.fillRect(0, this.canvas.height -60, this.canvas.width, 2);
-    this.ctx.fillRect(0, this.canvas.height -66, this.canvas.width, 2);
-    this.ctx.fillRect(0, this.canvas.height -72, this.canvas.width, 2);
-    
-    window.requestAnimationFrame(this.load.bind(this));
   }
 }

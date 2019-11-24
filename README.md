@@ -8,26 +8,38 @@ As tuned in Saint Marys, Kansas. Not an actual radio. Uses data from publicly ac
 
 ## Advanced
 
-`led.color('#27b7dc');` from Developer Tools console in browser.
+From Developer Tools console in browser.
+
+  * `settings.color('#27b7dc');` 
+  * `settings.volume(0.5);`
 
 ## Issues
 
-  * Crashes tab sometimes (on one pc)
+  * Crashes tab sometimes (on one pc) possible fixed
   * Plays in slow mo occasionally and have to reselect that station to fix
   * wrong scale initially (on one mobile device)
   * larger bottom margin (on one mobile device)
 
 ## To do
 
+  * Measure performance of svg vs canvas
+  * change backing store if not good
+  * index.html still has canvas
+
+  * Display one large svg
+  * Javascript modules
+  * npm for rollup and replace vagrant
+  * clean up visualizer on/off code
+
   * More responsive design
+  * Debug option (for lcd off color mostly)
   * Link back to v1
   * Merge
   * Keyboard shortcuts
-  * Add led color to storage
+  * Add settings to storage
   * Build system
   * console log error and fallback
   * Option to disable visualizer
-  * Volume control
   * Load your own JSON
   * Help text
   * Tone control

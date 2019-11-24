@@ -46,8 +46,8 @@ function randy() {
 }
 
 function tuneStation(x, retry) {
-  led.error(false);
-  led.tune(true);
+  lcd.error(false);
+  lcd.tune(true);
   document.getElementById("off").innerHTML = 'Off';
   display.load(stations[x].station);
   document.title = stations[x].station;
@@ -86,6 +86,9 @@ function presetSelect(e) {
 }
 
 window.addEventListener('load', function() {
+  //lcd.error(false);
+  //lcd.tune(false); // fades in...
+
   player1.create();
   player2.create();
   display.create();
@@ -96,8 +99,8 @@ window.addEventListener('load', function() {
       player1.unload();
       player2.unload();
 
-      led.error(false);
-      led.tune(false);
+      lcd.error(false);
+      lcd.tune(false);
       document.getElementById("off").innerHTML = 'On';
       display.unload();
       document.title = 'Radio';

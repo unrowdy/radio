@@ -6,6 +6,10 @@ var element = {
       for (var key in data.attributes) {
         element.setAttribute(key, data.attributes[key]);
       }
+
+      for (var key in data.style) {
+        element.style[key] = data.style[key];
+      }
   
       if(data.parent) {
         data.parent.appendChild(element);
@@ -46,6 +50,9 @@ var display = {
         cy: '43',
         r: '3.25',
         id: 'dp'
+      },
+      style: {
+        fill: settings.colors.off
       }
     });
   
@@ -82,6 +89,9 @@ var display = {
           attributes: {
             d: path[s],
             id: s + p
+          },
+          style: {
+            fill: settings.colors.off
           }
         });
       });
@@ -95,10 +105,10 @@ var display = {
       var mask = this.chart[c];
     
       mask.forEach((s) => {
-        document.getElementById(s + p).style.fill = led.lit;
+        document.getElementById(s + p).style.fill = settings.colors.on;
       });
     });
-    document.getElementById('dp').style.fill = led.lit;
+    document.getElementById('dp').style.fill = settings.colors.on;
   },
   unload: function() {
     for(p = 0; p < 4; p++) {
@@ -108,9 +118,9 @@ var display = {
       }
 
       segm.forEach((s) => {
-        document.getElementById(s + p).style.fill = led.off;
+        document.getElementById(s + p).style.fill = settings.colors.off;
       });
     }
-    document.getElementById('dp').style.fill = led.off;
+    document.getElementById('dp').style.fill = settings.colors.off;
   }
 }
