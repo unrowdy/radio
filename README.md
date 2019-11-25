@@ -8,11 +8,21 @@ As tuned in Saint Marys, Kansas. Not an actual radio. Uses data from publicly ac
 
 ## Advanced
 
+Keyboard | Shortcut
+---|---
+`Right Arrow` | Next station
+`Left Arrow` | Previous station
+`Up Arrow` | Full volume
+`Down Arrow` | Half volume
+`R` | Red LCD color
+`G` | Green LCD color
+`B` | Blue LCD color
+
 From Developer Tools console in browser.
 
-  * `settings.color('#27b7dc');`
-  * `settings.volume(0.5);`
-  * `settings.visualizer(false);`
+  * `settings.color('#27b7dc');` or any hex color
+  * `settings.volume(0.5);` or any value between 0 and 1
+  * `settings.visualizer(false);` or true
 
 ## Issues
 
