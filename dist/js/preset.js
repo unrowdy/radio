@@ -16,7 +16,7 @@ export let preset = {
     preset.active(false);
     storage.setItem('current', x);
   
-    if(retry) {
+    if(retry || !settings.visual) {
       player1.unload();
       player2.load(stations[x]);
     } else {

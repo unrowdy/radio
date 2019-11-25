@@ -1,6 +1,6 @@
 [{
   "station": "88.1",
-  "source": "https://playerservices.streamtheworld.com/api/livestream-redirect/MYFLRAAC_SC",
+  "source": "https://ic1.sslstream.com/kflr-fm",
   "type": "audio/aac"
 }, {
   "station": "88.9",
@@ -20,7 +20,7 @@
   "type": "audio/mpeg"
 }, {
   "station": "92.5",
-  "source": "http://50.22.253.45:80/bottradio",
+  "source": "https://ic1.sslstream.com/bottradio",
   "type": "audio/aac"
 }, {
   "station": "93.7",
@@ -76,7 +76,7 @@
   "type": "audio/mpeg"
 }, {
   "station": "105.9",
-  "source": "https://live.wostreaming.net/direct/greatplainsmedia-kkswfmaac-48",
+  "source": "https://live.wostreaming.net/direct/greatplainsmedia-kkswfmaac-ibc1",
   "type": "audio/aac"
 }, {
   "station": "106.9",

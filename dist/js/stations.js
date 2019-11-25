@@ -1,6 +1,7 @@
 // stations.js
 
 import {storage} from './storage.js';
+import {settings} from './settings.js';
 import {preset} from './preset.js';
 
 export let stations = {};
@@ -17,6 +18,6 @@ xhttp.addEventListener( 'load', function () {
     buttons[i].addEventListener('click', preset.select);
   }
 });
-xhttp.open('GET', 'data/stations.json', true);
+xhttp.open('GET', settings.stations, true);
 xhttp.overrideMimeType('application/json');
 xhttp.send();

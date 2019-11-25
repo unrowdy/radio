@@ -10,26 +10,23 @@ As tuned in Saint Marys, Kansas. Not an actual radio. Uses data from publicly ac
 
 From Developer Tools console in browser.
 
-  * `settings.color('#27b7dc');` 
+  * `settings.color('#27b7dc');`
   * `settings.volume(0.5);`
+  * `settings.visualizer(false);`
 
 ## Issues
 
-  * Crashes tab sometimes (on one pc) possible fixed
-  * Plays in slow mo occasionally and have to reselect that station to fix
+  * Crashes tab sometimes
+  * Plays half speed occasionally and visualizer is frozen
   * wrong scale initially (on one mobile device)
   * larger bottom margin (on one mobile device)
 
 ## To do
 
-  * Measure performance of svg vs canvas
-  * change backing store if not good
+  * pass more data areound vs including modules everywhere
   * index.html still has canvas
-
-  * Display one large svg
-  * npm for rollup and replace vagrant
   * clean up visualizer on/off code
-
+    * also the waterfall down was kinda cool
   * More responsive design
   * Debug option (for lcd off color mostly)
   * Link back to v1
@@ -37,8 +34,9 @@ From Developer Tools console in browser.
   * Keyboard shortcuts
   * Add settings to storage
   * Build system
+    * npm for rollup and replace vagrant
   * console log error and fallback
-  * Option to disable visualizer
+  * Display one large svg (can you still have fade in?)
   * Load your own JSON
   * Help text
   * Tone control

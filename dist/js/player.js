@@ -1,5 +1,6 @@
 // player.js
 
+import {storage} from './storage.js';
 import {settings} from './settings.js';
 import {preset} from './preset.js';
 import {visualizer} from './visualizer.js';
