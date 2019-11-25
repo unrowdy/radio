@@ -20,10 +20,11 @@ From Developer Tools console in browser.
   * Plays half speed occasionally and visualizer is frozen
   * wrong scale initially (on one mobile device)
   * larger bottom margin (on one mobile device)
+  * Visualizer only occupying the first 7 columns on one machine, weird
 
 ## To do
 
-  * pass more data areound vs including modules everywhere
+  * pass more data around vs including modules everywhere
   * index.html still has canvas
   * clean up visualizer on/off code
     * also the waterfall down was kinda cool
@@ -31,7 +32,6 @@ From Developer Tools console in browser.
   * Debug option (for lcd off color mostly)
   * Link back to v1
   * Merge
-  * Keyboard shortcuts
   * Add settings to storage
   * Build system
     * npm for rollup and replace vagrant

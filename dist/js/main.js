@@ -7,6 +7,7 @@ import {settings} from './settings.js';
 import {lcd, player1, player2} from './player.js';
 import {visualizer} from './visualizer.js';
 import {display} from './display.js';
+import './keyboard.js';
 
 window.settings = settings;
 
