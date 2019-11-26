@@ -10,13 +10,19 @@ As tuned in Saint Marys, Kansas. Not an actual radio. Uses data from publicly ac
 
 Keyboard | Shortcut
 ---|---
-`Right Arrow` | Next station
+`Spacebar` | ON/OFF toggle
 `Left Arrow` | Previous station
-`Up Arrow` | Full volume
-`Down Arrow` | Half volume
-`R` | Red LCD color
-`G` | Green LCD color
-`B` | Blue LCD color
+`Right Arrow` | Next station
+`Shift` | SET toggle
+`1` | Preset 1
+`2` | Preset 2
+`3` | Preset 3
+`4` | Preset 4
+`5` | Preset 5
+`-` | Half volume
+`=` | Full volume
+`,` | Previous color
+`.` | Next color
 
 From Developer Tools console in browser.
 
@@ -36,6 +42,8 @@ From Developer Tools console in browser.
 
   * pass more data around vs including modules everywhere
   * index.html still has canvas
+  * more than two levels of keyboard volume
+  * keyboard presets are kinda hacky, also allow ten
   * clean up visualizer on/off code
     * also the waterfall down was kinda cool
   * More responsive design
@@ -50,3 +58,6 @@ From Developer Tools console in browser.
   * Load your own JSON
   * Help text
   * Tone control
+  * add seek animation
+  * dual zone lighting
+  * day/night toggle

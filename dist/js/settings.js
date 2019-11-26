@@ -8,7 +8,7 @@ import {stations} from './stations.js';
 
 export let settings = {
   colors: {
-    on: '#54d454',
+    on: '#36b240',
     error: '#f33c3c',
     off: '#121214',
     gradient: [

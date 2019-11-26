@@ -84,7 +84,7 @@ export let visualizer = {
         for(let h=0; h<squares; h++) {
           var id = key + '-' + (h + 1);
           if((h+1) <= mag) {
-            document.getElementById(id).style.fill = settings.colors.gradient[h];
+            document.getElementById(id).style.fill = settings.colors.on; //settings.colors.gradient[h];
           } else {
             document.getElementById(id).style.fill = settings.colors.off;
           }
