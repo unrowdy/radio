@@ -2,13 +2,13 @@
 
 ![screenshot](dist/img/screencast.gif)
 
-https://chrispalmeri.com/radio/
+https://chrispalmeri.com/radio/v2/
 
 As tuned in Saint Marys, Kansas. Not an actual radio. Uses data from publicly accessible HTTP streams. Results may vary based on browser and device. Saves current station and preset info to your device.
 
-## Advanced
+## Keyboard shortcuts
 
-Keyboard | Shortcut
+Key | Description
 ---|---
 `Spacebar` | ON/OFF toggle
 `Left Arrow` | Previous station
@@ -21,43 +21,48 @@ Keyboard | Shortcut
 `5` | Preset 5
 `-` | Volume down
 `=` | Volume up
-`,` | Previous color
-`.` | Next color
+`,` | Previous display color
+`.` | Next display color
 
-From Developer Tools console in browser.
+## Console commands
 
   * `settings.color('#27b7dc');` or any hex color
   * `settings.volume(0.5);` or any value between 0 and 1
   * `settings.visualizer(false);` or true
 
-## Issues
+## Fix before merge
 
-  * Crashes tab sometimes
-  * Plays half speed occasionally and visualizer is frozen
-  * wrong scale initially (on one mobile device)
-  * larger bottom margin (on one mobile device)
-  * Visualizer only occupying the first 7 columns on one machine, weird
+  * Fix responsive design for smallest screen sizes
+  * Add new settings to storage
+  * Create a github release and a link back to v1
 
-## To do
+## Refactor
 
   * pass more data around vs including modules everywhere
   * index.html still has canvas
-  * volume indicator would be nice cause it is laggy
   * keyboard presets are kinda hacky, also allow ten
   * clean up visualizer on/off code
     * also the waterfall down was kinda cool
-  * More responsive design
-  * Debug option (for lcd off color mostly)
-  * Link back to v1
-  * Merge
-  * Add settings to storage
   * Build system
     * npm for rollup and replace vagrant
+  * Make display one large svg
+  * Debug option (for lcd off color mostly)
   * console log error and fallback
-  * Display one large svg (can you still have fade in?)
+
+## Issues for later
+
+  * Crashes tab sometimes
+  * Plays half speed occasionally and visualizer is frozen
+  * Visualizer only occupying the first 7 columns on one machine, weird
+
+## Features for later
+
+  * `?` should show keyboard shortcuts
+  * volume indicator would be nice cause there is a lag
   * Load your own JSON
+  * Continuous integration
   * Help text
-  * Tone control
   * add seek animation
+  * Tone control
   * dual zone lighting
   * day/night toggle
