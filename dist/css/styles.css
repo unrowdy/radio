@@ -2,8 +2,8 @@
 
 html, body {
   height: 100%;
-  min-height: 258px;
-  min-width: 534px;
+  min-height: 272px;
+  min-width: 380px;
   margin: 0;
   background: #3d3d41;
 }
@@ -81,14 +81,6 @@ a:hover {
   color: #030303;
 }
 
-canvas {
-  display: block;
-  /*
-    auto hide on small window sizes
-    to be more similar to previous version
-    maybe adjust button heights also
-  */
-}
 svg {
   float: right;
   /*fill: #121214;*/
@@ -110,4 +102,14 @@ svg {
 }
 .text {
   line-height: 2;
+  flex-basis: 58px;
+}
+#frequency {
+  flex-basis: 58px;
+}
+
+@media (max-width: 580px) {
+  #frequency svg {
+    display: none;
+  }
 }

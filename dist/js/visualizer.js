@@ -8,28 +8,24 @@ var squares = 12;
 export let visualizer = {
   running: false,
   preload: function() { // create the initial screen
-    this.canvas = document.getElementById('frequency');
-
     var values = new Array(10).fill(0);
 
     var screen = document.querySelector('.screen');
   
     var svg = element.create('svg', {
-      parent: screen,
+      parent: document.getElementById('frequency'),
       attributes: {
-        height: '72px',
-        width: '220px'
+        height: '74px',
+        width: '218px'
       }
     });
-
-    this.canvas.parentNode.replaceChild(svg, this.canvas);
 
     values.forEach((val, key) => {
       for(let k=0; k<squares; k++) {
         element.create('rect', {
           parent: svg,
           attributes: {
-            x: key * 22,
+            x: key * 22 + 2,
             y: (72 - 4) - (k * 6),
             width: 16,
             height: 4,

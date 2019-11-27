@@ -32,20 +32,22 @@ Key | Description
 
 ## Fix before merge
 
-  * Fix responsive design for smallest screen sizes
   * Add new settings to storage
-  * Create a github release and a link back to v1
+  * Create a link back to v1
 
 ## Refactor
 
+  * can you check/make the visualizer batch everything in one repaint?
   * pass more data around vs including modules everywhere
-  * index.html still has canvas
   * keyboard presets are kinda hacky, also allow ten
   * clean up visualizer on/off code
-    * also the waterfall down was kinda cool
+    * also turn off based on it being hidden due to screen size
+    * and hide based on being turned off
+    * but the waterfall down was kinda cool too
   * Build system
     * npm for rollup and replace vagrant
   * Make display one large svg
+    * maybe not, but 1/4 scale the whole thing like 7 segment already is, if you do
   * Debug option (for lcd off color mostly)
   * console log error and fallback
 
@@ -58,11 +60,14 @@ Key | Description
 ## Features for later
 
   * `?` should show keyboard shortcuts
+  * touch equivalents for keyboard commands
   * volume indicator would be nice cause there is a lag
   * Load your own JSON
   * Continuous integration
   * Help text
   * add seek animation
+  * https indicator
+  * blog post
   * Tone control
   * dual zone lighting
   * day/night toggle
