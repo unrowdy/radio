@@ -4,6 +4,22 @@ import {settings} from './settings.js';
 import {controls} from './controls.js';
 import {preset} from './preset.js';
 
+let volume = {
+  current: 1,
+  up: function() {
+    if(this.current < 1) {
+      this.current = (this.current * 10 + 1) / 10;
+      settings.volume(this.current);
+    }
+  },
+  down: function() {
+    if(this.current > 0) {
+      this.current = (this.current * 10 - 1) / 10;
+      settings.volume(this.current);
+    }
+  }
+};
+
 let color = {
   options: [
     '#f7707c',
@@ -52,7 +68,7 @@ let shortcuts = {
       controls.next();
     }
   },
-  'Shift': { // or its !@#...
+  's': {
     description: 'set',
     action: function() {
       controls.set();
@@ -101,13 +117,13 @@ let shortcuts = {
   '-': {
     description: 'volume down',
     action: function () {
-      settings.volume(0.5);
+      volume.down();
     }
   },
   '=': {
     description: 'volume up',
     action: function () {
-      settings.volume(1);
+      volume.up();
     }
   },
   ',': {
@@ -125,7 +141,9 @@ let shortcuts = {
 }
 
 window.addEventListener("keydown", function (e) {
-  if(shortcuts[e.key]) {
-    shortcuts[e.key].action();
+  if(!e.getModifierState('Control')) {
+    if(shortcuts[e.key]) {
+      shortcuts[e.key].action();
+    }
   }
 });

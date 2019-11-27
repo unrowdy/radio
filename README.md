@@ -13,14 +13,14 @@ Keyboard | Shortcut
 `Spacebar` | ON/OFF toggle
 `Left Arrow` | Previous station
 `Right Arrow` | Next station
-`Shift` | SET toggle
+`s` | SET toggle
 `1` | Preset 1
 `2` | Preset 2
 `3` | Preset 3
 `4` | Preset 4
 `5` | Preset 5
-`-` | Half volume
-`=` | Full volume
+`-` | Volume down
+`=` | Volume up
 `,` | Previous color
 `.` | Next color
 
@@ -42,7 +42,7 @@ From Developer Tools console in browser.
 
   * pass more data around vs including modules everywhere
   * index.html still has canvas
-  * more than two levels of keyboard volume
+  * volume indicator would be nice cause it is laggy
   * keyboard presets are kinda hacky, also allow ten
   * clean up visualizer on/off code
     * also the waterfall down was kinda cool
