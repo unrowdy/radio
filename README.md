@@ -21,12 +21,11 @@ Key | Description
 `5` | Preset 5
 `-` | Volume down
 `=` | Volume up
-`,` | Previous display color
-`.` | Next display color
+`,` | Previous color filter
+`.` | Next color filter
 
 ## Console commands
 
-  * `settings.color('#27b7dc');` or any hex color
   * `settings.volume(0.5);` or any value between 0 and 1
   * `settings.visualizer(false);` or true
 
@@ -34,9 +33,13 @@ Key | Description
 
   * Add new settings to storage
   * Create a link back to v1
+  * Update screencast
 
 ## Refactor
 
+  * use classes for color changing
+    * no need to use a setting for all the svg updates
+  * batch into one dom update
   * can you check/make the visualizer batch everything in one repaint?
   * pass more data around vs including modules everywhere
   * keyboard presets are kinda hacky, also allow ten
@@ -53,6 +56,7 @@ Key | Description
 
 ## Issues for later
 
+  * spacebar does wierd things when you have a button active still from previous mouse click
   * Crashes tab sometimes
   * Plays half speed occasionally and visualizer is frozen
   * Visualizer only occupying the first 7 columns on one machine, weird

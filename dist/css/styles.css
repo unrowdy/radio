@@ -3,7 +3,7 @@
 html, body {
   height: 100%;
   min-height: 272px;
-  min-width: 380px;
+  min-width: 358px;
   margin: 0;
   background: #3d3d41;
 }
@@ -83,7 +83,6 @@ a:hover {
 
 svg {
   float: right;
-  /*fill: #121214;*/
 }
 #lcd {
   width: 138px;
@@ -92,10 +91,12 @@ svg {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  height: 74px;
   padding: 21px;
-  color: #121214;
-  background: #030303;
+  color: #1c1c1f;
+  background: #0c0c0e;
   margin: 8px;
+  position: relative;
 }
 .screen > * {
   flex-shrink: 0;
@@ -107,9 +108,32 @@ svg {
 #frequency {
   flex-basis: 58px;
 }
+#filter {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  mix-blend-mode: multiply;
+}
+.clear {
+  background: #eee;
+}
+.red {
+  background: #e11;
+}
+.green {
+  background: #1e1;
+}
+.amber {
+  background: #ed1;
+}
 
 @media (max-width: 580px) {
   #frequency svg {
     display: none;
+  }
+  main, button {
+    padding: 4px;
   }
 }

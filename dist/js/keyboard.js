@@ -20,17 +20,12 @@ let volume = {
   }
 };
 
-let color = {
+let filter = {
   options: [
-    '#f7707c',
-    '#eb7e24',
-    '#a69e22',
-    '#36b240',
-    '#1cae9a',
-    '#16aac2',
-    '#2ca3ea',
-    '#9c8df5',
-    '#f465c7'
+    'clear',
+    'amber',
+    'red',
+    'green'
   ],
   current: 3,
   up: function() {
@@ -38,14 +33,14 @@ let color = {
     if(this.current >= this.options.length) {
       this.current = 0;
     }
-    settings.color(this.options[this.current]);
+    document.getElementById('filter').className = this.options[this.current];
   },
   down: function() {
     this.current = this.current - 1;
     if(this.current < 0) {
       this.current = this.options.length - 1;
     }
-    settings.color(this.options[this.current]);
+    document.getElementById('filter').className = this.options[this.current];
   }
 }
 
@@ -129,13 +124,13 @@ let shortcuts = {
   ',': {
     description: 'color back',
     action: function() { 
-      color.down();
+      filter.down();
     }
   },
   '.': {
     description: 'color forward',
     action: function() {
-      color.up();
+      filter.up();
     }
   },
 }
