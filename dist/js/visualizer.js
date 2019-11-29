@@ -1,40 +1,47 @@
 // visualizer.js
 
-import {settings} from './settings.js';
 import {element} from './display.js';
-
-var squares = 12;
 
 export let visualizer = {
   running: false,
   preload: function() { // create the initial screen
-    var values = new Array(10).fill(0);
+    let md = 'M0 0h222v74h-222z';
+    for(let i = 0; i < 10; i++) {
+      for(let j = 0; j < 12; j++) {
+        if(i === 0 && j === 0) {md += 'm4 2';}
+        else if(j === 0) {md += 'm22 -66';}
+        else {md += 'm0 6';}
+        md += 'h16v4h-16z';
+      }
+    }
 
-    var screen = document.querySelector('.screen');
-  
     var svg = element.create('svg', {
       parent: document.getElementById('frequency'),
       attributes: {
         height: '74px',
-        width: '218px'
+        width: '222px'
       }
     });
 
-    values.forEach((val, key) => {
-      for(let k=0; k<squares; k++) {
-        element.create('rect', {
-          parent: svg,
-          attributes: {
-            x: key * 22 + 2,
-            y: (72 - 4) - (k * 6),
-            width: 16,
-            height: 4,
-            id: key + '-' + (k+1)
-          },
-          style: {
-            fill: settings.colors.off
-          }
-        });
+    this.back = element.create('path', {
+      parent: svg,
+      attributes: {
+        id: 'back',
+        d: 'M1 1h220v72h-220z'
+      }
+    });
+    this.fill = element.create('path', {
+      parent: svg,
+      attributes: {
+        id: 'fill',
+        d: 'M1 73V73z'
+      }
+    });
+    this.mask = element.create('path', {
+      parent: svg,
+      attributes: {
+        id: 'mask',
+        d: md
       }
     });
   },
@@ -71,21 +78,20 @@ export let visualizer = {
         counts[step] += 1;
       });
 
+      var fd = 'M1 73';
       values.forEach((val, key) => {
         // this is the average value for that bar
         var avg = Math.round(val / counts[key]);
         // make it exponential and scale to 12
         var mag = Math.round((avg * avg) * (12 / (255 * 255)));
 
-        for(let h=0; h<squares; h++) {
-          var id = key + '-' + (h + 1);
-          if((h+1) <= mag) {
-            document.getElementById(id).style.fill = settings.colors.on; //settings.colors.gradient[h];
-          } else {
-            document.getElementById(id).style.fill = settings.colors.off;
-          }
-        }
+        var h = key * 22 + 23;
+        var v = 73 - mag * 6;
+        fd += 'V' + v + 'H' + h;
       });
+      fd += 'V73z';
+      
+      this.fill.setAttribute('d', fd);
     
       window.requestAnimationFrame(this.load.bind(this));
     }
@@ -94,12 +100,6 @@ export let visualizer = {
     this.running = false;
 
     // clear the screen
-    var values = new Array(10).fill(0);
-    values.forEach((val, key) => {
-      for(let h=0; h<squares; h++) {
-        var id = key + '-' + (h + 1);
-        document.getElementById(id).style.fill = settings.colors.off;
-      }
-    });
+    this.fill.setAttribute('d', 'M1 73V73z');
   }
 };

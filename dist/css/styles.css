@@ -129,6 +129,17 @@ svg {
   background: #ed1;
 }
 
+#back {
+  fill: #1c1c1f;
+}
+#fill {
+  fill: #ffb16e;
+}
+#mask {
+  fill: #0c0c0e;
+  fill-rule: evenodd;
+}
+
 @media (max-width: 580px) {
   #frequency svg {
     display: none;
