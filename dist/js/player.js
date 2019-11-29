@@ -39,7 +39,6 @@ export let player1 = {
   },
   load: function(station) {
     visualizer.create();
-    visualizer.stop();
     
     this.source.setAttribute("src", station.source + randy());
     this.source.setAttribute("type", station.type);
@@ -49,12 +48,18 @@ export let player1 = {
       this.audio.play();
       lcd.tune(false);
       
-      this.audio.captureStream = this.audio.captureStream || this.audio.mozCaptureStream;
+      if(this.audio.mozCaptureStream) {
+        this.audio.captureStream = this.audio.mozCaptureStream;
+        console.log('mozilla');
+      } else {
+        this.audio.muted = true;
+        console.log('chrome');
+      }
       var stream = this.audio.captureStream();
       this.media = visualizer.context.createMediaStreamSource(stream);
       this.media.connect(visualizer.analyser);
       
-      visualizer.create();
+      visualizer.start();
     };
   },
   unload: function() {

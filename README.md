@@ -35,30 +35,30 @@ Key | Description
   * Create a link back to v1
   * Update screencast
 
+## Verify if fixed
+
+  * Crashes tab sometimes
+  * Plays half speed occasionally and visualizer is frozen
+
 ## Refactor
 
-  * use classes for color changing
-    * no need to use a setting for all the svg updates
-  * batch into one dom update
-  * can you check/make the visualizer batch everything in one repaint?
+  * use classes for color changing display and player
+    * debug should change main class
+  * debug should toggle console logs and whole fps block
   * pass more data around vs including modules everywhere
   * keyboard presets are kinda hacky, also allow ten
-  * clean up visualizer on/off code
-    * also turn off based on it being hidden due to screen size
+  * visualizer turn off based on it being hidden due to screen size
     * and hide based on being turned off
-    * but the waterfall down was kinda cool too
   * Build system
     * npm for rollup and replace vagrant
   * Make display one large svg
     * maybe not, but 1/4 scale the whole thing like 7 segment already is, if you do
-  * Debug option (for lcd off color mostly)
-  * console log error and fallback
 
 ## Issues for later
 
+  * in chrome the player volume does not affect the audio context output
+    * nuke volume, or rewrite audio sourcing
   * spacebar does wierd things when you have a button active still from previous mouse click
-  * Crashes tab sometimes
-  * Plays half speed occasionally and visualizer is frozen
   * Visualizer only occupying the first 7 columns on one machine, weird
 
 ## Features for later

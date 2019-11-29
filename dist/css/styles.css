@@ -15,7 +15,7 @@ body {
 main {
   flex-basis: 680px;
 }
-main, button {
+main, button, #fps {
   font-family: 'Share Tech Mono', monospace;
   text-transform: uppercase;
   letter-spacing: 0.05em;
@@ -138,6 +138,15 @@ svg {
 #mask {
   fill: #0c0c0e;
   fill-rule: evenodd;
+}
+#fps {
+  position: absolute;
+  width: 32px;
+  top: 0;
+  left: 0;
+  text-align: center;
+  margin: 0;
+  background: #ed1;
 }
 
 @media (max-width: 580px) {

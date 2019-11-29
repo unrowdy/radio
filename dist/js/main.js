@@ -39,4 +39,9 @@ window.addEventListener('load', function() {
   document.getElementById('set').addEventListener('click', function() {
     controls.set();
   });
+
+  var urlParams = new URLSearchParams(window.location.search);
+  if(urlParams.has('debug')) {
+    document.getElementById('fps').style.display = 'block';
+  }
 });
