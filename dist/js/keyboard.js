@@ -138,6 +138,7 @@ let shortcuts = {
 window.addEventListener("keydown", function (e) {
   if(!e.getModifierState('Control')) {
     if(shortcuts[e.key]) {
+      document.activeElement.blur();
       shortcuts[e.key].action();
     }
   }

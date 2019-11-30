@@ -33,16 +33,12 @@ Key | Description
 
 ## Fix before merge
 
+  * visualizer turn off based on it being hidden due to screen size
+    * and hide based on being turned off
+    * some way to tap to turn off also
   * Add new settings to storage
   * Create a link back to v1
   * Update screencast
-
-## Verify if fixed
-
-  * Crashes tab sometimes
-  * Plays half speed occasionally and visualizer is frozen
-    * half speed happened once since visualizer refactor
-    * was not frozen though
 
 ## Refactor
 
@@ -50,8 +46,6 @@ Key | Description
   * debug should toggle console logs
   * pass more data around vs including modules everywhere
   * keyboard presets are kinda hacky, also allow ten
-  * visualizer turn off based on it being hidden due to screen size
-    * and hide based on being turned off
   * Would visualizer look better at various zooms is 1/4 scale?
   * Build system
     * npm for rollup and replace vagrant
@@ -60,9 +54,10 @@ Key | Description
 
 ## Issues for later
 
+  * Crashes tab sometimes
+  * Plays half speed occasionally and visualizer is frozen
   * in chrome the player volume does not affect the audio context output
     * nuke volume, or rewrite audio sourcing
-  * spacebar does wierd things when you have a button active still from previous mouse click
   * Visualizer only occupying the first 7 columns on one machine, weird
 
 ## Features for later
@@ -77,4 +72,3 @@ Key | Description
   * https indicator
   * blog post
   * Tone control
-  * dual zone lighting
