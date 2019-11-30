@@ -1,5 +1,6 @@
 // visualizer.js
 
+import {settings} from './settings.js';
 import {element} from './display.js';
 
 export let visualizer = {
@@ -68,14 +69,16 @@ export let visualizer = {
   load: function() { // refresh it
     window.requestAnimationFrame(() => {
       
-      var end = Date.now();
-      var diff = 0;
-      if(this.last) {
-        diff = end - this.last;
-        diff = Math.round(1 / (diff / 1000));
+      if(settings.debugFlag) {
+        var end = Date.now();
+        var diff = 0;
+        if(this.last) {
+          diff = end - this.last;
+          diff = Math.round(1 / (diff / 1000));
+        }
+        this.last = end;
+        document.getElementById('fps').innerHTML = diff;
       }
-      this.last = end;
-      document.getElementById('fps').innerHTML = diff;
 
       if(this.running) {
       

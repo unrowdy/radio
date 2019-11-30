@@ -42,6 +42,6 @@ window.addEventListener('load', function() {
 
   var urlParams = new URLSearchParams(window.location.search);
   if(urlParams.has('debug')) {
-    document.getElementById('fps').style.display = 'block';
+    settings.debug(true);
   }
 });

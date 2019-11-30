@@ -33,14 +33,14 @@ let filter = {
     if(this.current >= this.options.length) {
       this.current = 0;
     }
-    document.getElementById('filter').className = this.options[this.current];
+    document.querySelector('main').className = this.options[this.current];
   },
   down: function() {
     this.current = this.current - 1;
     if(this.current < 0) {
       this.current = this.options.length - 1;
     }
-    document.getElementById('filter').className = this.options[this.current];
+    document.querySelector('main').className = this.options[this.current];
   }
 }
 

@@ -1,7 +1,5 @@
 // display.js
 
-import {settings} from './settings.js';
-
 export let element = {
   create: function(type, data) {
     var element = document.createElementNS("http://www.w3.org/2000/svg", type);
@@ -54,9 +52,6 @@ export let display = {
         cy: '43',
         r: '3.25',
         id: 'dp'
-      },
-      style: {
-        fill: settings.colors.off
       }
     });
   
@@ -93,9 +88,6 @@ export let display = {
           attributes: {
             d: path[s],
             id: s + p
-          },
-          style: {
-            fill: settings.colors.off
           }
         });
       });
@@ -109,10 +101,10 @@ export let display = {
       var mask = this.chart[c];
     
       mask.forEach((s) => {
-        document.getElementById(s + p).style.fill = settings.colors.on;
+        document.getElementById(s + p).classList.add('lit');
       });
     });
-    document.getElementById('dp').style.fill = settings.colors.on;
+    document.getElementById('dp').classList.add('lit');
   },
   unload: function() {
     for(let p = 0; p < 4; p++) {
@@ -122,9 +114,9 @@ export let display = {
       }
 
       segm.forEach((s) => {
-        document.getElementById(s + p).style.fill = settings.colors.off;
+        document.getElementById(s + p).classList.remove('lit');
       });
     }
-    document.getElementById('dp').style.fill = settings.colors.off;
+    document.getElementById('dp').classList.remove('lit');
   }
 };

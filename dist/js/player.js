@@ -12,16 +12,16 @@ function randy() {
 export let lcd = {
   tune: function(state) {
     if(state) {
-      document.getElementById('tune').style.color = settings.colors.on;
+      document.getElementById('tune').classList.add('lit');
     } else {
-      document.getElementById('tune').style.color = settings.colors.off;
+      document.getElementById('tune').classList.remove('lit');
     }
   },
   error: function(state) {
     if(state) {
-      document.getElementById('error').style.color = settings.colors.error;
+      document.getElementById('error').classList.add('error');
     } else {
-      document.getElementById('error').style.color = settings.colors.off;
+      document.getElementById('error').classList.remove('error');
     }
   }
 }

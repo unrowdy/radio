@@ -28,6 +28,8 @@ Key | Description
 
   * `settings.volume(0.5);` or any value between 0 and 1
   * `settings.visualizer(false);` or true
+  * `settings.night(true);` or false
+  * `settings.debug(true);` or false
 
 ## Fix before merge
 
@@ -39,16 +41,18 @@ Key | Description
 
   * Crashes tab sometimes
   * Plays half speed occasionally and visualizer is frozen
+    * half speed happened once since visualizer refactor
+    * was not frozen though
 
 ## Refactor
 
-  * use classes for color changing display and player
-    * debug should change main class
-  * debug should toggle console logs and whole fps block
+  * debug should change main class
+  * debug should toggle console logs
   * pass more data around vs including modules everywhere
   * keyboard presets are kinda hacky, also allow ten
   * visualizer turn off based on it being hidden due to screen size
     * and hide based on being turned off
+  * Would visualizer look better at various zooms is 1/4 scale?
   * Build system
     * npm for rollup and replace vagrant
   * Make display one large svg
@@ -74,4 +78,3 @@ Key | Description
   * blog post
   * Tone control
   * dual zone lighting
-  * day/night toggle

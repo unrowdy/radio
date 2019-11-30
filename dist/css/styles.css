@@ -46,6 +46,24 @@ button:hover {
 button:focus {
   outline: none;
 }
+.lit, .error {
+  fill: #ffb16e;
+  color: #ffb16e;
+}
+.night, .night button {
+  background: #000;
+}
+.night #back {
+  fill: #131313;
+}
+.night .screen {
+  fill: #131313;
+  color: #131313;
+  background: #1c1c1f;
+}
+.night #mask {
+  fill: #1c1c1f;
+}
 #error, #tune {
   flex-basis: 20%;
   align-self: flex-end;
@@ -93,6 +111,7 @@ svg {
   align-items: center;
   height: 74px;
   padding: 21px;
+  fill: #1c1c1f;
   color: #1c1c1f;
   background: #0c0c0e;
   margin: 8px;
@@ -116,17 +135,30 @@ svg {
   right: 0;
   mix-blend-mode: multiply;
 }
-.clear {
+.clear #filter {
   background: #eee;
 }
-.red {
+.red #filter {
   background: #e11;
 }
-.green {
+.green #filter {
   background: #1e1;
 }
-.amber {
+.amber #filter {
   background: #ed1;
+}
+
+.night .clear button {
+  color: #eea567;
+}
+.night .red button {
+  color: #ee0c07;
+}
+.night .green button {
+  color: #11a507;
+}
+.night .amber button {
+  color: #ee9907;
 }
 
 #back {
