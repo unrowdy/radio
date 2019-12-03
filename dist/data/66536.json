@@ -19,6 +19,10 @@
   "source": "https://streaming.kansaspublicradio.org:8001/kpr1",
   "type": "audio/mpeg"
 }, {
+  "station": "91.9",
+  "source": "https://s.radiowave.io/ksdb.opus",
+  "type": "audio/ogg"
+}, {
   "station": "92.5",
   "source": "https://ic1.sslstream.com/bottradio",
   "type": "audio/aac"
@@ -74,6 +78,10 @@
   "station": "104.7",
   "source": "https://crystalout.surfernetwork.com:8001/KXBZ_MP3",
   "type": "audio/mpeg"
+}, {
+  "station": "104.9",
+  "source": "https://ice23.securenetsystems.net/KSALFM",
+  "type": "audio/aac"
 }, {
   "station": "105.9",
   "source": "https://live.wostreaming.net/direct/greatplainsmedia-kkswfmaac-ibc1",
