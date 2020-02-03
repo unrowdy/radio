@@ -15,6 +15,22 @@ if (storage.getItem('current') === undefined) {
   storage.setItem('current', -1);
 }
 
+window.addEventListener('resize', function() {
+  // ok, but it will override any user choice that they made
+  // also only change on crossing messes up if user choice
+  // need to still turn off on small screen but remember
+  // also will turn on radio when it is off
+  // also does not affect the initial load
+  let w = document.body.getBoundingClientRect().width;
+  if(settings.visual && w <= 580) {
+    settings.visualizer(false);
+  } else if(!settings.visual && w > 580) {
+    settings.visualizer(true);
+  }
+  // could copy paste into load
+  // need a 'playing' variable for the settings function to reference though
+});
+
 window.addEventListener('load', function() {
   //lcd.error(false);
   //lcd.tune(false); // fades in...
@@ -38,6 +54,10 @@ window.addEventListener('load', function() {
 
   document.getElementById('set').addEventListener('click', function() {
     controls.set();
+  });
+
+  document.getElementById('filter').addEventListener('click', function() {
+    settings.vt();
   });
 
   var urlParams = new URLSearchParams(window.location.search);

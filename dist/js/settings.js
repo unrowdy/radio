@@ -30,6 +30,14 @@ export let settings = {
   },
   visualizer: function(boo) {
     this.visual = boo;
+    if(boo) {
+      document.querySelector('#frequency svg').style.display = 'block';
+    } else {
+      document.querySelector('#frequency svg').style.display = 'none';
+    }
     preset.play(storage.getItem('current'));
+  },
+  vt: function() {
+    this.visualizer(!this.visual);
   }
 }

@@ -42,6 +42,7 @@ Key | Description
 
 ## Refactor
 
+  * adding stations is a breaking change for presets...
   * debug should change main class
   * debug should toggle console logs
   * pass more data around vs including modules everywhere
@@ -62,6 +63,7 @@ Key | Description
 
 ## Features for later
 
+  * MediaSession API for media keys/android notification control
   * `?` should show keyboard shortcuts
   * touch equivalents for keyboard commands
   * volume indicator would be nice cause there is a lag
@@ -72,3 +74,5 @@ Key | Description
   * https indicator
   * blog post
   * Tone control
+  * backlight on/off at night
+  * buttons on/off at night
