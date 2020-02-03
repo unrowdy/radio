@@ -46,6 +46,7 @@ Key | Description
 
 ## Refactor
 
+  * run it through https://realfavicongenerator.net/
   * adding stations is a breaking change for presets...
   * debug should change main class
   * debug should toggle console logs

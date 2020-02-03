@@ -32,6 +32,10 @@ window.addEventListener('resize', function() {
 });
 
 window.addEventListener('load', function() {
+  if('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('/worker.js');
+  }
+  
   //lcd.error(false);
   //lcd.tune(false); // fades in...
 
