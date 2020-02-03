@@ -1,0 +1,289 @@
+<html>
+  <head>
+<style>
+body {
+  background: #333;
+}
+.night {
+  background: #000;
+}
+
+div {
+  padding: 24px;
+  margin: 16px;
+  width: 200px;
+  fill: #292929;
+  background: #111;
+}
+
+.night div {
+  fill: #141414;
+  background: #262626;
+}
+
+.night .red {
+  fill: #211;
+  background: #311;
+}
+.red .lit {
+  fill: #e21;
+}
+
+.night .green {
+  fill: #121;
+  background: #131;
+}
+.green .lit {
+  fill: #2c1;
+}
+
+.night .amber {
+  fill: #221;
+  background: #331;
+}
+.amber .lit {
+  fill: #ec1;
+}
+
+.night .blue {
+  fill: #112;
+  background: #123;
+}
+.blue .lit {
+  fill: #37f;
+}
+
+.white .lit {
+  fill: #eee;
+}
+
+.clear .lit {
+  fill: #fd8;
+}
+
+</style>
+  </head>
+  <body class="day">
+      <div class="red">
+        <svg height="48px" width="138px">
+          <circle cx="101" cy="43" r="3.25" id="dp" class="lit"></circle>
+          <g height="48px" width="31px" transform="translate(108,0) scale(0.25)">
+            <path d="M33 8c-9 0-16.5 7.2-17 16l-.1 2.7 19.9 2L36 24h54.8l5.7-16z" id="a0" class="lit"></path>
+            <path d="M102.8 8.2l-7 19.6-3 52 14.7 8.5 5.2-6L116 24c.4-8.2-5.3-14.8-13.2-15.8z" id="b0" class="lit"></path>
+            <path d="M107.5 95.2l-16 9.3-2.9 52 7.3 26.7c6.6-2 11.7-8 12-15.2l3.8-67.8z" id="c0" class="lit"></path>
+            <path d="M31.4 168L8 170.2c.7 7.8 7 13.8 15 13.8H90l-4.4-16z" id="d0" class="lit"></path>
+            <path d="M16.6 96l-4.9 5.6-3.5 62.6 20.1-2 3.2-57.7z" id="e0"></path>
+            <path d="M15.5 32.7l-2.8 51.8 4 4.5 16.2-9.5 2.5-44.9z" id="f0" class="lit"></path>
+            <path d="M37.2 84l-14.6 8.4 13 7.6h51.7l14.2-8.2L88.1 84z" id="g0" class="lit"></path>
+          </g>
+          <g height="48px" width="31px" transform="translate(65,0) scale(0.25)">
+            <path d="M33 8c-9 0-16.5 7.2-17 16l-.1 2.7 19.9 2L36 24h54.8l5.7-16z" id="a1" class="lit"></path>
+            <path d="M102.8 8.2l-7 19.6-3 52 14.7 8.5 5.2-6L116 24c.4-8.2-5.3-14.8-13.2-15.8z" id="b1" class="lit"></path>
+            <path d="M107.5 95.2l-16 9.3-2.9 52 7.3 26.7c6.6-2 11.7-8 12-15.2l3.8-67.8z" id="c1"></path>
+            <path d="M31.4 168L8 170.2c.7 7.8 7 13.8 15 13.8H90l-4.4-16z" id="d1" class="lit"></path>
+            <path d="M16.6 96l-4.9 5.6-3.5 62.6 20.1-2 3.2-57.7z" id="e1" class="lit"></path>
+            <path d="M15.5 32.7l-2.8 51.8 4 4.5 16.2-9.5 2.5-44.9z" id="f1"></path>
+            <path d="M37.2 84l-14.6 8.4 13 7.6h51.7l14.2-8.2L88.1 84z" id="g1" class="lit"></path>
+          </g>
+          <g height="48px" width="31px" transform="translate(22,0) scale(0.25)">
+            <path d="M33 8c-9 0-16.5 7.2-17 16l-.1 2.7 19.9 2L36 24h54.8l5.7-16z" id="a2" class="lit"></path>
+            <path d="M102.8 8.2l-7 19.6-3 52 14.7 8.5 5.2-6L116 24c.4-8.2-5.3-14.8-13.2-15.8z" id="b2" class="lit"></path>
+            <path d="M107.5 95.2l-16 9.3-2.9 52 7.3 26.7c6.6-2 11.7-8 12-15.2l3.8-67.8z" id="c2" class="lit"></path>
+            <path d="M31.4 168L8 170.2c.7 7.8 7 13.8 15 13.8H90l-4.4-16z" id="d2" class="lit"></path>
+            <path d="M16.6 96l-4.9 5.6-3.5 62.6 20.1-2 3.2-57.7z" id="e2" class="lit"></path>
+            <path d="M15.5 32.7l-2.8 51.8 4 4.5 16.2-9.5 2.5-44.9z" id="f2" class="lit"></path>
+            <path d="M37.2 84l-14.6 8.4 13 7.6h51.7l14.2-8.2L88.1 84z" id="g2"></path>
+          </g>
+          <g height="48px" width="31px" transform="translate(-21,0) scale(0.25)">
+            <path d="M102.8 8.2l-7 19.6-3 52 14.7 8.5 5.2-6L116 24c.4-8.2-5.3-14.8-13.2-15.8z" id="b3" class="lit"></path>
+            <path d="M107.5 95.2l-16 9.3-2.9 52 7.3 26.7c6.6-2 11.7-8 12-15.2l3.8-67.8z" id="c3" class="lit"></path>
+          </g>
+        </svg>
+      </div>
+      
+    <div class="amber">
+        <svg height="48px" width="138px">
+          <circle cx="101" cy="43" r="3.25" id="dp" class="lit"></circle>
+          <g height="48px" width="31px" transform="translate(108,0) scale(0.25)">
+            <path d="M33 8c-9 0-16.5 7.2-17 16l-.1 2.7 19.9 2L36 24h54.8l5.7-16z" id="a0" class="lit"></path>
+            <path d="M102.8 8.2l-7 19.6-3 52 14.7 8.5 5.2-6L116 24c.4-8.2-5.3-14.8-13.2-15.8z" id="b0" class="lit"></path>
+            <path d="M107.5 95.2l-16 9.3-2.9 52 7.3 26.7c6.6-2 11.7-8 12-15.2l3.8-67.8z" id="c0" class="lit"></path>
+            <path d="M31.4 168L8 170.2c.7 7.8 7 13.8 15 13.8H90l-4.4-16z" id="d0" class="lit"></path>
+            <path d="M16.6 96l-4.9 5.6-3.5 62.6 20.1-2 3.2-57.7z" id="e0"></path>
+            <path d="M15.5 32.7l-2.8 51.8 4 4.5 16.2-9.5 2.5-44.9z" id="f0" class="lit"></path>
+            <path d="M37.2 84l-14.6 8.4 13 7.6h51.7l14.2-8.2L88.1 84z" id="g0" class="lit"></path>
+          </g>
+          <g height="48px" width="31px" transform="translate(65,0) scale(0.25)">
+            <path d="M33 8c-9 0-16.5 7.2-17 16l-.1 2.7 19.9 2L36 24h54.8l5.7-16z" id="a1" class="lit"></path>
+            <path d="M102.8 8.2l-7 19.6-3 52 14.7 8.5 5.2-6L116 24c.4-8.2-5.3-14.8-13.2-15.8z" id="b1" class="lit"></path>
+            <path d="M107.5 95.2l-16 9.3-2.9 52 7.3 26.7c6.6-2 11.7-8 12-15.2l3.8-67.8z" id="c1"></path>
+            <path d="M31.4 168L8 170.2c.7 7.8 7 13.8 15 13.8H90l-4.4-16z" id="d1" class="lit"></path>
+            <path d="M16.6 96l-4.9 5.6-3.5 62.6 20.1-2 3.2-57.7z" id="e1" class="lit"></path>
+            <path d="M15.5 32.7l-2.8 51.8 4 4.5 16.2-9.5 2.5-44.9z" id="f1"></path>
+            <path d="M37.2 84l-14.6 8.4 13 7.6h51.7l14.2-8.2L88.1 84z" id="g1" class="lit"></path>
+          </g>
+          <g height="48px" width="31px" transform="translate(22,0) scale(0.25)">
+            <path d="M33 8c-9 0-16.5 7.2-17 16l-.1 2.7 19.9 2L36 24h54.8l5.7-16z" id="a2" class="lit"></path>
+            <path d="M102.8 8.2l-7 19.6-3 52 14.7 8.5 5.2-6L116 24c.4-8.2-5.3-14.8-13.2-15.8z" id="b2" class="lit"></path>
+            <path d="M107.5 95.2l-16 9.3-2.9 52 7.3 26.7c6.6-2 11.7-8 12-15.2l3.8-67.8z" id="c2" class="lit"></path>
+            <path d="M31.4 168L8 170.2c.7 7.8 7 13.8 15 13.8H90l-4.4-16z" id="d2" class="lit"></path>
+            <path d="M16.6 96l-4.9 5.6-3.5 62.6 20.1-2 3.2-57.7z" id="e2" class="lit"></path>
+            <path d="M15.5 32.7l-2.8 51.8 4 4.5 16.2-9.5 2.5-44.9z" id="f2" class="lit"></path>
+            <path d="M37.2 84l-14.6 8.4 13 7.6h51.7l14.2-8.2L88.1 84z" id="g2"></path>
+          </g>
+          <g height="48px" width="31px" transform="translate(-21,0) scale(0.25)">
+            <path d="M102.8 8.2l-7 19.6-3 52 14.7 8.5 5.2-6L116 24c.4-8.2-5.3-14.8-13.2-15.8z" id="b3" class="lit"></path>
+            <path d="M107.5 95.2l-16 9.3-2.9 52 7.3 26.7c6.6-2 11.7-8 12-15.2l3.8-67.8z" id="c3" class="lit"></path>
+          </g>
+        </svg>
+      </div>
+      
+    <div class="green">
+        <svg height="48px" width="138px">
+          <circle cx="101" cy="43" r="3.25" id="dp" class="lit"></circle>
+          <g height="48px" width="31px" transform="translate(108,0) scale(0.25)">
+            <path d="M33 8c-9 0-16.5 7.2-17 16l-.1 2.7 19.9 2L36 24h54.8l5.7-16z" id="a0" class="lit"></path>
+            <path d="M102.8 8.2l-7 19.6-3 52 14.7 8.5 5.2-6L116 24c.4-8.2-5.3-14.8-13.2-15.8z" id="b0" class="lit"></path>
+            <path d="M107.5 95.2l-16 9.3-2.9 52 7.3 26.7c6.6-2 11.7-8 12-15.2l3.8-67.8z" id="c0" class="lit"></path>
+            <path d="M31.4 168L8 170.2c.7 7.8 7 13.8 15 13.8H90l-4.4-16z" id="d0" class="lit"></path>
+            <path d="M16.6 96l-4.9 5.6-3.5 62.6 20.1-2 3.2-57.7z" id="e0"></path>
+            <path d="M15.5 32.7l-2.8 51.8 4 4.5 16.2-9.5 2.5-44.9z" id="f0" class="lit"></path>
+            <path d="M37.2 84l-14.6 8.4 13 7.6h51.7l14.2-8.2L88.1 84z" id="g0" class="lit"></path>
+          </g>
+          <g height="48px" width="31px" transform="translate(65,0) scale(0.25)">
+            <path d="M33 8c-9 0-16.5 7.2-17 16l-.1 2.7 19.9 2L36 24h54.8l5.7-16z" id="a1" class="lit"></path>
+            <path d="M102.8 8.2l-7 19.6-3 52 14.7 8.5 5.2-6L116 24c.4-8.2-5.3-14.8-13.2-15.8z" id="b1" class="lit"></path>
+            <path d="M107.5 95.2l-16 9.3-2.9 52 7.3 26.7c6.6-2 11.7-8 12-15.2l3.8-67.8z" id="c1"></path>
+            <path d="M31.4 168L8 170.2c.7 7.8 7 13.8 15 13.8H90l-4.4-16z" id="d1" class="lit"></path>
+            <path d="M16.6 96l-4.9 5.6-3.5 62.6 20.1-2 3.2-57.7z" id="e1" class="lit"></path>
+            <path d="M15.5 32.7l-2.8 51.8 4 4.5 16.2-9.5 2.5-44.9z" id="f1"></path>
+            <path d="M37.2 84l-14.6 8.4 13 7.6h51.7l14.2-8.2L88.1 84z" id="g1" class="lit"></path>
+          </g>
+          <g height="48px" width="31px" transform="translate(22,0) scale(0.25)">
+            <path d="M33 8c-9 0-16.5 7.2-17 16l-.1 2.7 19.9 2L36 24h54.8l5.7-16z" id="a2" class="lit"></path>
+            <path d="M102.8 8.2l-7 19.6-3 52 14.7 8.5 5.2-6L116 24c.4-8.2-5.3-14.8-13.2-15.8z" id="b2" class="lit"></path>
+            <path d="M107.5 95.2l-16 9.3-2.9 52 7.3 26.7c6.6-2 11.7-8 12-15.2l3.8-67.8z" id="c2" class="lit"></path>
+            <path d="M31.4 168L8 170.2c.7 7.8 7 13.8 15 13.8H90l-4.4-16z" id="d2" class="lit"></path>
+            <path d="M16.6 96l-4.9 5.6-3.5 62.6 20.1-2 3.2-57.7z" id="e2" class="lit"></path>
+            <path d="M15.5 32.7l-2.8 51.8 4 4.5 16.2-9.5 2.5-44.9z" id="f2" class="lit"></path>
+            <path d="M37.2 84l-14.6 8.4 13 7.6h51.7l14.2-8.2L88.1 84z" id="g2"></path>
+          </g>
+          <g height="48px" width="31px" transform="translate(-21,0) scale(0.25)">
+            <path d="M102.8 8.2l-7 19.6-3 52 14.7 8.5 5.2-6L116 24c.4-8.2-5.3-14.8-13.2-15.8z" id="b3" class="lit"></path>
+            <path d="M107.5 95.2l-16 9.3-2.9 52 7.3 26.7c6.6-2 11.7-8 12-15.2l3.8-67.8z" id="c3" class="lit"></path>
+          </g>
+        </svg>
+      </div>
+      
+    <div class="blue">
+        <svg height="48px" width="138px">
+          <circle cx="101" cy="43" r="3.25" id="dp" class="lit"></circle>
+          <g height="48px" width="31px" transform="translate(108,0) scale(0.25)">
+            <path d="M33 8c-9 0-16.5 7.2-17 16l-.1 2.7 19.9 2L36 24h54.8l5.7-16z" id="a0" class="lit"></path>
+            <path d="M102.8 8.2l-7 19.6-3 52 14.7 8.5 5.2-6L116 24c.4-8.2-5.3-14.8-13.2-15.8z" id="b0" class="lit"></path>
+            <path d="M107.5 95.2l-16 9.3-2.9 52 7.3 26.7c6.6-2 11.7-8 12-15.2l3.8-67.8z" id="c0" class="lit"></path>
+            <path d="M31.4 168L8 170.2c.7 7.8 7 13.8 15 13.8H90l-4.4-16z" id="d0" class="lit"></path>
+            <path d="M16.6 96l-4.9 5.6-3.5 62.6 20.1-2 3.2-57.7z" id="e0"></path>
+            <path d="M15.5 32.7l-2.8 51.8 4 4.5 16.2-9.5 2.5-44.9z" id="f0" class="lit"></path>
+            <path d="M37.2 84l-14.6 8.4 13 7.6h51.7l14.2-8.2L88.1 84z" id="g0" class="lit"></path>
+          </g>
+          <g height="48px" width="31px" transform="translate(65,0) scale(0.25)">
+            <path d="M33 8c-9 0-16.5 7.2-17 16l-.1 2.7 19.9 2L36 24h54.8l5.7-16z" id="a1" class="lit"></path>
+            <path d="M102.8 8.2l-7 19.6-3 52 14.7 8.5 5.2-6L116 24c.4-8.2-5.3-14.8-13.2-15.8z" id="b1" class="lit"></path>
+            <path d="M107.5 95.2l-16 9.3-2.9 52 7.3 26.7c6.6-2 11.7-8 12-15.2l3.8-67.8z" id="c1"></path>
+            <path d="M31.4 168L8 170.2c.7 7.8 7 13.8 15 13.8H90l-4.4-16z" id="d1" class="lit"></path>
+            <path d="M16.6 96l-4.9 5.6-3.5 62.6 20.1-2 3.2-57.7z" id="e1" class="lit"></path>
+            <path d="M15.5 32.7l-2.8 51.8 4 4.5 16.2-9.5 2.5-44.9z" id="f1"></path>
+            <path d="M37.2 84l-14.6 8.4 13 7.6h51.7l14.2-8.2L88.1 84z" id="g1" class="lit"></path>
+          </g>
+          <g height="48px" width="31px" transform="translate(22,0) scale(0.25)">
+            <path d="M33 8c-9 0-16.5 7.2-17 16l-.1 2.7 19.9 2L36 24h54.8l5.7-16z" id="a2" class="lit"></path>
+            <path d="M102.8 8.2l-7 19.6-3 52 14.7 8.5 5.2-6L116 24c.4-8.2-5.3-14.8-13.2-15.8z" id="b2" class="lit"></path>
+            <path d="M107.5 95.2l-16 9.3-2.9 52 7.3 26.7c6.6-2 11.7-8 12-15.2l3.8-67.8z" id="c2" class="lit"></path>
+            <path d="M31.4 168L8 170.2c.7 7.8 7 13.8 15 13.8H90l-4.4-16z" id="d2" class="lit"></path>
+            <path d="M16.6 96l-4.9 5.6-3.5 62.6 20.1-2 3.2-57.7z" id="e2" class="lit"></path>
+            <path d="M15.5 32.7l-2.8 51.8 4 4.5 16.2-9.5 2.5-44.9z" id="f2" class="lit"></path>
+            <path d="M37.2 84l-14.6 8.4 13 7.6h51.7l14.2-8.2L88.1 84z" id="g2"></path>
+          </g>
+          <g height="48px" width="31px" transform="translate(-21,0) scale(0.25)">
+            <path d="M102.8 8.2l-7 19.6-3 52 14.7 8.5 5.2-6L116 24c.4-8.2-5.3-14.8-13.2-15.8z" id="b3" class="lit"></path>
+            <path d="M107.5 95.2l-16 9.3-2.9 52 7.3 26.7c6.6-2 11.7-8 12-15.2l3.8-67.8z" id="c3" class="lit"></path>
+          </g>
+        </svg>
+      </div>
+      
+    <div class="white">
+        <svg height="48px" width="138px">
+          <circle cx="101" cy="43" r="3.25" id="dp" class="lit"></circle>
+          <g height="48px" width="31px" transform="translate(108,0) scale(0.25)">
+            <path d="M33 8c-9 0-16.5 7.2-17 16l-.1 2.7 19.9 2L36 24h54.8l5.7-16z" id="a0" class="lit"></path>
+            <path d="M102.8 8.2l-7 19.6-3 52 14.7 8.5 5.2-6L116 24c.4-8.2-5.3-14.8-13.2-15.8z" id="b0" class="lit"></path>
+            <path d="M107.5 95.2l-16 9.3-2.9 52 7.3 26.7c6.6-2 11.7-8 12-15.2l3.8-67.8z" id="c0" class="lit"></path>
+            <path d="M31.4 168L8 170.2c.7 7.8 7 13.8 15 13.8H90l-4.4-16z" id="d0" class="lit"></path>
+            <path d="M16.6 96l-4.9 5.6-3.5 62.6 20.1-2 3.2-57.7z" id="e0"></path>
+            <path d="M15.5 32.7l-2.8 51.8 4 4.5 16.2-9.5 2.5-44.9z" id="f0" class="lit"></path>
+            <path d="M37.2 84l-14.6 8.4 13 7.6h51.7l14.2-8.2L88.1 84z" id="g0" class="lit"></path>
+          </g>
+          <g height="48px" width="31px" transform="translate(65,0) scale(0.25)">
+            <path d="M33 8c-9 0-16.5 7.2-17 16l-.1 2.7 19.9 2L36 24h54.8l5.7-16z" id="a1" class="lit"></path>
+            <path d="M102.8 8.2l-7 19.6-3 52 14.7 8.5 5.2-6L116 24c.4-8.2-5.3-14.8-13.2-15.8z" id="b1" class="lit"></path>
+            <path d="M107.5 95.2l-16 9.3-2.9 52 7.3 26.7c6.6-2 11.7-8 12-15.2l3.8-67.8z" id="c1"></path>
+            <path d="M31.4 168L8 170.2c.7 7.8 7 13.8 15 13.8H90l-4.4-16z" id="d1" class="lit"></path>
+            <path d="M16.6 96l-4.9 5.6-3.5 62.6 20.1-2 3.2-57.7z" id="e1" class="lit"></path>
+            <path d="M15.5 32.7l-2.8 51.8 4 4.5 16.2-9.5 2.5-44.9z" id="f1"></path>
+            <path d="M37.2 84l-14.6 8.4 13 7.6h51.7l14.2-8.2L88.1 84z" id="g1" class="lit"></path>
+          </g>
+          <g height="48px" width="31px" transform="translate(22,0) scale(0.25)">
+            <path d="M33 8c-9 0-16.5 7.2-17 16l-.1 2.7 19.9 2L36 24h54.8l5.7-16z" id="a2" class="lit"></path>
+            <path d="M102.8 8.2l-7 19.6-3 52 14.7 8.5 5.2-6L116 24c.4-8.2-5.3-14.8-13.2-15.8z" id="b2" class="lit"></path>
+            <path d="M107.5 95.2l-16 9.3-2.9 52 7.3 26.7c6.6-2 11.7-8 12-15.2l3.8-67.8z" id="c2" class="lit"></path>
+            <path d="M31.4 168L8 170.2c.7 7.8 7 13.8 15 13.8H90l-4.4-16z" id="d2" class="lit"></path>
+            <path d="M16.6 96l-4.9 5.6-3.5 62.6 20.1-2 3.2-57.7z" id="e2" class="lit"></path>
+            <path d="M15.5 32.7l-2.8 51.8 4 4.5 16.2-9.5 2.5-44.9z" id="f2" class="lit"></path>
+            <path d="M37.2 84l-14.6 8.4 13 7.6h51.7l14.2-8.2L88.1 84z" id="g2"></path>
+          </g>
+          <g height="48px" width="31px" transform="translate(-21,0) scale(0.25)">
+            <path d="M102.8 8.2l-7 19.6-3 52 14.7 8.5 5.2-6L116 24c.4-8.2-5.3-14.8-13.2-15.8z" id="b3" class="lit"></path>
+            <path d="M107.5 95.2l-16 9.3-2.9 52 7.3 26.7c6.6-2 11.7-8 12-15.2l3.8-67.8z" id="c3" class="lit"></path>
+          </g>
+        </svg>
+      </div>
+      
+    <div class="clear">
+        <svg height="48px" width="138px">
+          <circle cx="101" cy="43" r="3.25" id="dp" class="lit"></circle>
+          <g height="48px" width="31px" transform="translate(108,0) scale(0.25)">
+            <path d="M33 8c-9 0-16.5 7.2-17 16l-.1 2.7 19.9 2L36 24h54.8l5.7-16z" id="a0" class="lit"></path>
+            <path d="M102.8 8.2l-7 19.6-3 52 14.7 8.5 5.2-6L116 24c.4-8.2-5.3-14.8-13.2-15.8z" id="b0" class="lit"></path>
+            <path d="M107.5 95.2l-16 9.3-2.9 52 7.3 26.7c6.6-2 11.7-8 12-15.2l3.8-67.8z" id="c0" class="lit"></path>
+            <path d="M31.4 168L8 170.2c.7 7.8 7 13.8 15 13.8H90l-4.4-16z" id="d0" class="lit"></path>
+            <path d="M16.6 96l-4.9 5.6-3.5 62.6 20.1-2 3.2-57.7z" id="e0"></path>
+            <path d="M15.5 32.7l-2.8 51.8 4 4.5 16.2-9.5 2.5-44.9z" id="f0" class="lit"></path>
+            <path d="M37.2 84l-14.6 8.4 13 7.6h51.7l14.2-8.2L88.1 84z" id="g0" class="lit"></path>
+          </g>
+          <g height="48px" width="31px" transform="translate(65,0) scale(0.25)">
+            <path d="M33 8c-9 0-16.5 7.2-17 16l-.1 2.7 19.9 2L36 24h54.8l5.7-16z" id="a1" class="lit"></path>
+            <path d="M102.8 8.2l-7 19.6-3 52 14.7 8.5 5.2-6L116 24c.4-8.2-5.3-14.8-13.2-15.8z" id="b1" class="lit"></path>
+            <path d="M107.5 95.2l-16 9.3-2.9 52 7.3 26.7c6.6-2 11.7-8 12-15.2l3.8-67.8z" id="c1"></path>
+            <path d="M31.4 168L8 170.2c.7 7.8 7 13.8 15 13.8H90l-4.4-16z" id="d1" class="lit"></path>
+            <path d="M16.6 96l-4.9 5.6-3.5 62.6 20.1-2 3.2-57.7z" id="e1" class="lit"></path>
+            <path d="M15.5 32.7l-2.8 51.8 4 4.5 16.2-9.5 2.5-44.9z" id="f1"></path>
+            <path d="M37.2 84l-14.6 8.4 13 7.6h51.7l14.2-8.2L88.1 84z" id="g1" class="lit"></path>
+          </g>
+          <g height="48px" width="31px" transform="translate(22,0) scale(0.25)">
+            <path d="M33 8c-9 0-16.5 7.2-17 16l-.1 2.7 19.9 2L36 24h54.8l5.7-16z" id="a2" class="lit"></path>
+            <path d="M102.8 8.2l-7 19.6-3 52 14.7 8.5 5.2-6L116 24c.4-8.2-5.3-14.8-13.2-15.8z" id="b2" class="lit"></path>
+            <path d="M107.5 95.2l-16 9.3-2.9 52 7.3 26.7c6.6-2 11.7-8 12-15.2l3.8-67.8z" id="c2" class="lit"></path>
+            <path d="M31.4 168L8 170.2c.7 7.8 7 13.8 15 13.8H90l-4.4-16z" id="d2" class="lit"></path>
+            <path d="M16.6 96l-4.9 5.6-3.5 62.6 20.1-2 3.2-57.7z" id="e2" class="lit"></path>
+            <path d="M15.5 32.7l-2.8 51.8 4 4.5 16.2-9.5 2.5-44.9z" id="f2" class="lit"></path>
+            <path d="M37.2 84l-14.6 8.4 13 7.6h51.7l14.2-8.2L88.1 84z" id="g2"></path>
+          </g>
+          <g height="48px" width="31px" transform="translate(-21,0) scale(0.25)">
+            <path d="M102.8 8.2l-7 19.6-3 52 14.7 8.5 5.2-6L116 24c.4-8.2-5.3-14.8-13.2-15.8z" id="b3" class="lit"></path>
+            <path d="M107.5 95.2l-16 9.3-2.9 52 7.3 26.7c6.6-2 11.7-8 12-15.2l3.8-67.8z" id="c3" class="lit"></path>
+          </g>
+        </svg>
+      </div>
+  </body>
+</html>
