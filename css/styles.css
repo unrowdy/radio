@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css?family=Share+Tech+Mono');
+
+html, body {
+  height: 100%;
+  min-height: 272px;
+  min-width: 358px;
+  margin: 0;
+  background: #3d3d41;
+}
+body {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+main {
+  flex-basis: 680px;
+}
+main, button, #fps {
+  font-family: 'Share Tech Mono', monospace;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 6px;
+}
+.preset, .control {
+  display: flex;
+  justify-content: space-between;
+}
+button {
+  height: 42px;
+  width: 20%;
+  color: #e6e6f3;
+  font-size: 16px;
+  cursor: pointer;
+  background: #1c1c1f;
+  border: none;
+  margin: 8px;
+}
+.control button {
+  height: 54px;
+  flex-grow: 1;
+  font-size: 18px;
+}
+button:hover {
+  background: #2c2c30;
+}
+button:focus {
+  outline: none;
+}
+.lit, .error {
+  fill: #ffb16e;
+  color: #ffb16e;
+}
+.night, .night button {
+  background: #000;
+}
+.night #back {
+  fill: #131313;
+}
+.night .screen {
+  fill: #131313;
+  color: #131313;
+  background: #1c1c1f;
+}
+.night #mask {
+  fill: #1c1c1f;
+}
+#error, #tune {
+  flex-basis: 20%;
+  align-self: flex-end;
+  font-size: 16px;
+  text-align: center;
+}
+#tune {
+  transition: color 800ms ease-in-out;
+}
+.blink {
+  animation: 1s blink ease-in-out infinite;
+}
+@keyframes blink {
+  0%, 100% {
+    color: #e6e6f3;
+  }
+  50% {
+    color: transparent;
+  }
+}
+p {
+  font-size: 14px;
+  text-align: justify;
+  line-height: 1.4;
+  color: #1c1c1f;
+  margin: 24px 6px 6px;
+  display: none;
+}
+a {
+  color: #1c1c1f;
+}
+a:hover {
+  color: #030303;
+}
+
+svg {
+  float: right;
+}
+#lcd {
+  width: 138px;
+}
+.screen {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 74px;
+  padding: 21px;
+  fill: #1c1c1f;
+  color: #1c1c1f;
+  background: #0c0c0e;
+  margin: 8px;
+  position: relative;
+}
+.screen > * {
+  flex-shrink: 0;
+}
+.text {
+  line-height: 2;
+  flex-basis: 58px;
+}
+#frequency {
+  flex-basis: 58px;
+}
+#filter {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  mix-blend-mode: multiply;
+}
+.clear #filter {
+  background: #eee;
+}
+.red #filter {
+  background: #e11;
+}
+.green #filter {
+  background: #1e1;
+}
+.amber #filter {
+  background: #ed1;
+}
+
+.night .clear button {
+  color: #eea567;
+}
+.night .red button {
+  color: #ee0c07;
+}
+.night .green button {
+  color: #11a507;
+}
+.night .amber button {
+  color: #ee9907;
+}
+
+#back {
+  fill: #1c1c1f;
+}
+#fill {
+  fill: #ffb16e;
+}
+#mask {
+  fill: #0c0c0e;
+  fill-rule: evenodd;
+}
+#fps {
+  position: absolute;
+  width: 32px;
+  top: 0;
+  left: 0;
+  text-align: center;
+  margin: 0;
+  background: #ed1;
+}
+
+@media (max-width: 580px) {
+  #frequency svg {
+    display: none;
+  }
+  main, button {
+    padding: 4px;
+  }
+}

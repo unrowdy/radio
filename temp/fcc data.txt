@@ -1,0 +1,1 @@
+https://transition.fcc.gov/fcc-bin/fmq?list=1&dist=50&dlat2=39&mlat2=12&slat2=14.666400&ns=N&dlon2=96&mlon2=18&slon2=29.982204&ew=W&size=9
