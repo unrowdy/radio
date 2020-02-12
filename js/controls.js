@@ -1,6 +1,7 @@
 // controls.js
 
 import {storage} from './storage.js';
+import {settings} from './settings.js';
 import {stations} from './stations.js';
 import {preset} from './preset.js';
 import {lcd, player1, player2} from './player.js';
@@ -15,6 +16,7 @@ export let controls = {
       lcd.error(false);
       lcd.tune(false);
       document.getElementById("off").innerHTML = 'On';
+      settings.playing = false;
       display.unload();
       document.title = 'Radio';
       preset.active(false);

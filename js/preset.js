@@ -1,6 +1,7 @@
 // preset.js
 
 import {storage} from './storage.js';
+import {settings} from './settings.js';
 import {stations} from './stations.js';
 import {lcd, player1, player2} from './player.js';
 import {display} from './display.js';
@@ -11,6 +12,7 @@ export let preset = {
     lcd.error(false);
     lcd.tune(true);
     document.getElementById("off").innerHTML = 'Off';
+    settings.playing = true;
     display.load(stations[x].station);
     document.title = stations[x].station;
     preset.active(false);

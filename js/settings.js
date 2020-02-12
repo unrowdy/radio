@@ -7,6 +7,8 @@ import {preset} from './preset.js';
 export let settings = {
   stations: 'data/66536.json',
   visual: true,
+  prefersVisual: true,
+  playing: false,
   debugFlag: false,
   debug: function(sw) {
     if(sw) {
@@ -30,14 +32,18 @@ export let settings = {
   },
   visualizer: function(boo) {
     this.visual = boo;
-    if(boo) {
+    let w = document.body.getBoundingClientRect().width;
+    if(boo && w > 580 && settings.prefersVisual) {
       document.querySelector('#frequency svg').style.display = 'block';
     } else {
       document.querySelector('#frequency svg').style.display = 'none';
     }
-    preset.play(storage.getItem('current'));
+    if(settings.playing) {
+      preset.play(storage.getItem('current'));
+    }
   },
   vt: function() {
+    this.prefersVisual = !this.prefersVisual;
     this.visualizer(!this.visual);
   }
 }
