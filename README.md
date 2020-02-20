@@ -8,7 +8,11 @@ As tuned in Saint Marys, Kansas. Not an actual radio. Uses data from publicly ac
 
 ## Local Develpoment
 
-Easiest way to run locally is in stall python and run `python -m http.server` in this directory.
+`npm install`
+
+`npm run build`
+
+`npm run serve`
 
 ## Keyboard shortcuts
 
