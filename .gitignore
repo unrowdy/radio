@@ -1,5 +1,5 @@
 # Build output
-dist/js/
+dist/bundle.js
 
 # Dependency directories
 node_modules/
