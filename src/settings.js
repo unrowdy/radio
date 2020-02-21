@@ -5,7 +5,7 @@ import {storage} from './storage.js';
 import {preset} from './preset.js';
 
 export let settings = {
-  stations: 'data/66536.json',
+  stations: '66536.json',
   visual: true,
   prefersVisual: true,
   playing: false,
