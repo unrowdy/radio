@@ -1,12 +1,12 @@
-# Online Radio
+# Thin Radio
 
 ![screenshot](screencast.gif)
 
-https://chrispalmeri.com/radio/
+https://thinradio.com
 
 As tuned in Saint Marys, Kansas. Not an actual radio. Uses data from publicly accessible HTTP streams. Results may vary based on browser and device. Saves current station and preset info to your device.
 
-## Local Develpoment
+## Local Development
 
 `npm install`
 
@@ -42,19 +42,15 @@ Key | Description
 ## Fix before merge
 
   * Add new settings to storage
-  * Create a link back to v1
 
 ## Refactor
 
-  * run it through https://realfavicongenerator.net/
   * adding stations is a breaking change for presets...
   * debug should change main class
   * debug should toggle console logs
   * pass more data around vs including modules everywhere
   * keyboard presets are kinda hacky, also allow ten
   * Would visualizer look better at various zooms is 1/4 scale?
-  * Build system
-    * npm for rollup
   * Make display one large svg
     * maybe not, but 1/4 scale the whole thing like 7 segment already is, if you do
 
@@ -73,7 +69,6 @@ Key | Description
   * touch equivalents for keyboard commands
   * volume indicator would be nice cause there is a lag
   * Load your own JSON
-  * Continuous integration
   * Help text
   * add seek animation
   * https indicator
