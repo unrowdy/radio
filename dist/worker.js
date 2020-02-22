@@ -2,7 +2,11 @@
 
 const CACHE_NAME = 'whatever';
 const FILES_TO_CACHE = [
-  'index.html'
+  '/',
+  'index.html',
+  'styles.css',
+  'bundle.js',
+  '66536.json'
 ];
 
 self.addEventListener('install', function(event) {
@@ -19,20 +23,11 @@ self.addEventListener('fetch', function(event) {
     return;
   }
   event.respondWith(
-    // check cache first on any request, otherwise fetch
-    /*caches.match(event.request)
-      .then(function(response) {
-        if(response) {
-          return response;
-        }
-        return fetch(event.request);
-      })*/
-    // if any fetch fails return the 'offline' page from cache
     fetch(event.request)
       .catch(() => {
         return caches.open(CACHE_NAME)
           .then((cache) => {
-            return cache.match('index.html');
+            return cache.match(event.request);
           })
       })
   );
