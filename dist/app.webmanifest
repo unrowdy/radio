@@ -4,18 +4,15 @@
   "icons": [{
     "src": "/android-chrome-192x192.png",
     "sizes": "192x192",
-    "type": "image/png"
-  }, {
-    "src": "/android-chrome-maskable-196x196.png",
-    "sizes": "196x196",
     "type": "image/png",
-    "purpose": "maskable"
+    "purpose": "maskable any"
   }, {
     "src": "/android-chrome-512x512.png",
     "sizes": "512x512",
-    "type": "image/png"
+    "type": "image/png",
+    "purpose": "maskable any"
   }],
-  "start_url": "/index.html",
+  "start_url": "/",
   "theme_color": "#1c1c1f",
   "background_color": "#3d3d41",
   "display": "standalone"
