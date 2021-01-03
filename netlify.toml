@@ -3,7 +3,5 @@
   publish = "dist/"
 
 [[redirects]]
-  from = "https://thinradio.netlify.com/*"
-  to = "https://thinradio.com/:splat"
-  status = 301
-  force = true
+  from = "https://unrowdy-radio.netlify.app/*"
+  to = "https://radio.unrowdy.com/:splat"
