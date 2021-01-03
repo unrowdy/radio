@@ -5,3 +5,4 @@
 [[redirects]]
   from = "https://unrowdy-radio.netlify.app/*"
   to = "https://radio.unrowdy.com/:splat"
+  force = true
