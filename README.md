@@ -1,4 +1,4 @@
-# Thin Radio
+# Radio
 
 ![screenshot](screencast.gif)
 
