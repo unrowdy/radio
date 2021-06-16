@@ -39,7 +39,7 @@ export let player1 = {
   },
   load: function(station) {
     visualizer.create();
-    
+
     this.source.setAttribute("src", station.source + randy());
     this.source.setAttribute("type", station.type);
     this.audio.appendChild(this.source);
@@ -47,18 +47,21 @@ export let player1 = {
     this.audio.oncanplay = () => {
       this.audio.play();
       lcd.tune(false);
-      
+
       if(this.audio.mozCaptureStream) {
         this.audio.captureStream = this.audio.mozCaptureStream;
         console.log('mozilla');
       } else {
-        this.audio.muted = true;
+        //this.audio.muted = true;
+        this.audio.volume = 0.000001;
+        //https://bugs.chromium.org/p/chromium/issues/detail?id=1125304
+        //https://bugs.chromium.org/p/chromium/issues/detail?id=1136404
         console.log('chrome');
       }
       var stream = this.audio.captureStream();
       this.media = visualizer.context.createMediaStreamSource(stream);
       this.media.connect(visualizer.analyser);
-      
+
       visualizer.start();
     };
   },
