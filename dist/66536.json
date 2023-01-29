@@ -1,11 +1,11 @@
 [{
   "station": "88.1",
-  "source": "https://ic1.sslstream.com/kflr-fm",
+  "source": "https://icecast.streammyflr.org/FLRstream",
   "type": "audio/aac"
 }, {
   "station": "88.9",
-  "source": "https://emf.streamguys1.com/sk012_mp3_high_web",
-  "type": "audio/mpeg"
+  "source": "https://emf-hls.streamguys1.com/k-love-live-aac-64k",
+  "type": "audio/aac"
 }, {
   "station": "89.9",
   "source": "https://ice41.securenetsystems.net/KJILW",
@@ -36,7 +36,7 @@
   "type": "audio/aac"
 }, {
   "station": "95.3",
-  "source": "https://slave.irdb.network/khca.opus",
+  "source": "https://s.radiowave.io/khca.opus",
   "type": "audio/ogg"
 }, {
   "station": "96.3",
@@ -48,7 +48,7 @@
   "type": "audio/aac"
 }, {
   "station": "98.3",
-  "source": "http://ksmk.org:8000/radio",
+  "source": "http://ksmk.org:9000/radio",
   "type": "audio/mpeg"
 }, {
   "station": "99.3",
@@ -84,7 +84,7 @@
   "type": "audio/aac"
 }, {
   "station": "105.9",
-  "source": "https://live.wostreaming.net/direct/greatplainsmedia-kkswfmaac-ibc1",
+  "source": "https://ice23.securenetsystems.net/KKSWFM",
   "type": "audio/aac"
 }, {
   "station": "106.9",
