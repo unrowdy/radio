@@ -32,7 +32,7 @@
   "type": "audio/mpeg"
 }, {
   "station": "94.5",
-  "source": "https://live.wostreaming.net/direct/alphacorporate-wibwfmaac-ibc4",
+  "source": "https://live.amperwave.net/direct/alphacorporate-wibwfmaac-ibc4",
   "type": "audio/aac"
 }, {
   "station": "95.3",
@@ -48,7 +48,7 @@
   "type": "audio/aac"
 }, {
   "station": "98.3",
-  "source": "http://ksmk.org:9000/radio",
+  "source": "https://ksmk.stream:9000/radio",
   "type": "audio/mpeg"
 }, {
   "station": "99.3",
@@ -80,7 +80,7 @@
   "type": "audio/mpeg"
 }, {
   "station": "104.9",
-  "source": "https://live.wostreaming.net/direct/alphacorporate-wibwamaac-ibc4",
+  "source": "https://live.amperwave.net/direct/alphacorporate-wibwamaac-ibc4",
   "type": "audio/aac"
 }, {
   "station": "105.9",
@@ -88,7 +88,7 @@
   "type": "audio/aac"
 }, {
   "station": "106.9",
-  "source": "https://live.wostreaming.net/direct/alphacorporate-ktpkfmaac-ibc4",
+  "source": "https://live.amperwave.net/direct/alphacorporate-ktpkfmaac-ibc4",
   "type": "audio/aac"
 }, {
   "station": "107.7",
